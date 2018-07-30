@@ -22,7 +22,7 @@ ADD_DEFINITIONS(-DUSE_JEMALLOC)
 
 AUX_SOURCE_DIRECTORY(. network_Src)
 
-ADD_LIBRARY(network ${network_Src})
+
 
 #ADD_LIBRARY(network_shared SHARED ${network_Src})
 #ADD_LIBRARY(network_static STATIC ${network_Src})
@@ -30,4 +30,13 @@ ADD_LIBRARY(network ${network_Src})
 #SET_TARGET_PROPERTIES(network_shared PROPERTIES OUTPUT_NAME "network")
 #SET_TARGET_PROPERTIES(network_static PROPERTIES OUTPUT_NAME "network")
 
+SET(JEMALLOC_INCLUDE_DIR /usr/include/jemalloc)
+SET(JEMALLOC_LIB /usr/local/lib)
 
+INCLUDE_DIRECTORIES(${JEMALLOC_INCLUDE_DIR})
+
+LINK_DIRECTORIES(${JEMALLOC_LIB})
+
+ADD_LIBRARY(network ${network_Src})
+
+TARGET_LINK_LIBRARIES(network jemalloc)
