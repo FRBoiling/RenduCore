@@ -39,8 +39,9 @@ void zlibc_free(void *ptr) {
     free(ptr);
 }
 
-#include <pthread.h>
 #include <string.h>
+#include <pthread.h>
+#include "config.h"
 #include "zmalloc.h"
 #include "atomicvar.h"
 

@@ -32,7 +32,7 @@
 #include <sys/epoll.h>
 #include <unistd.h>
 #include "ae.h"
-#include "../malloc/zmalloc.h"
+#include "zmalloc.h"
 
 typedef struct aeApiState {
     int epfd;

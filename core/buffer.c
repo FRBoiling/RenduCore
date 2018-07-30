@@ -4,9 +4,6 @@
 #include <string.h>
 #include <assert.h>
 
-#include "malloc/zmalloc.h"
-
-
 buffer_t *alloc_buffer()
 {
     buffer_t *buffer = zmalloc(sizeof(buffer_t));

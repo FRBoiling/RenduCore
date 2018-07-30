@@ -24,7 +24,7 @@ void Server::bind(int port) {
 
     //aeCreateTimeEvent(loop, 1000, serverCron, NULL, NULL);
     server_->port = port;
-    server_->listen_fd = anetTcpServer(server_->err_info, server_->port, NULL, server_->backlog);
+    server_->listen_fd = anetTcpServer(server_->err_info, server_->port, NULL, server_->tcp_backlog);
     if (server_->listen_fd != ANET_ERR) {
         anetNonBlock(server_->err_info, server_->listen_fd);
     }

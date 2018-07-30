@@ -5,7 +5,7 @@
 #include <string.h>
 #include <assert.h>
 
-#include "malloc/zmalloc.h"
+#include "jemalloc_define.h"
 
 package_t *alloc_packet(uint32_t data_len)
 {

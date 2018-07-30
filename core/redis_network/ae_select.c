@@ -32,7 +32,7 @@
 #include <sys/select.h>
 #include <string.h>
 #include "ae.h"
-#include "../malloc/zmalloc.h"
+#include "zmalloc.h"
 
 typedef struct aeApiState {
     fd_set rfds, wfds;

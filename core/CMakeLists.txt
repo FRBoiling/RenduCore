@@ -1,6 +1,16 @@
-AUX_SOURCE_DIRECTORY(. core_Src)
-AUX_SOURCE_DIRECTORY(network network_Src)
-AUX_SOURCE_DIRECTORY(malloc malloc_Src)
+# 指定使用cmake版本最低是3.10
+cmake_minimum_required(VERSION 3.10)
 
-ADD_LIBRARY(core ${core_Src} ${network_Src} ${malloc_Src})
+SET(CMAKE_C_STANDARD 99)
+
+AUX_SOURCE_DIRECTORY(. core_Src)
+AUX_SOURCE_DIRECTORY(./redis_network redis_network_Src)
+
+#INCLUDE_DIRECTORIES(redis_network)
+
+ADD_LIBRARY(core ${core_Src} ${redis_network_Src})
+
+#TARGET_LINK_LIBRARIES(core network)
+
+
 

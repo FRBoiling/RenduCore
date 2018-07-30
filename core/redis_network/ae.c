@@ -41,7 +41,8 @@
 #include <errno.h>
 
 #include "ae.h"
-#include "../malloc/zmalloc.h"
+#include "zmalloc.h"
+#include "config.h"
 
 /* Include the best multiplexing layer supported by this system.
  * The following should be ordered by performances, descending. */
@@ -55,7 +56,7 @@
         #include "ae_kqueue.c"
         #else
         #include "ae_select.c"
-#endif
+        #endif
     #endif
 #endif
 

@@ -1,7 +1,8 @@
-#ifndef AEBUFFER_H
-#define AEBUFFER_H
+#ifndef _AEBUFFER_H
+#define _AEBUFFER_H
 
 #include <sys/types.h>
+#include "jemalloc_define.h"
 
 #define DEFAULT_BUFF_SIZE        1024
 
@@ -22,4 +23,4 @@ size_t get_readable_size(buffer_t *buffer);
 
 size_t get_writeable_size(buffer_t *buffer);
 
-#endif //AEBUFFER_H
+#endif //_AEBUFFER_H

@@ -1,6 +1,6 @@
 AUX_SOURCE_DIRECTORY(. log_Src)
 
-ADD_LIBRARY(liblog ${log_Src})
+ADD_LIBRARY(log ${log_Src})
 
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/util)
-TARGET_LINK_LIBRARIES(liblog libutil)
+TARGET_LINK_LIBRARIES(log util)
