@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.10)
 add_definitions(-DOS_LINUX)
 
 # 项目名
-project(ServerCluster)
+project(server_.luster)
 
 
 

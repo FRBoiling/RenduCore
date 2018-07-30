@@ -1,6 +1,23 @@
 #ifndef _AEBUFFER_H
 #define _AEBUFFER_H
 
+
+/// 《Linux多线程服务端编程：使用muduo C++网络库》陈硕著 7.4章节，P204
+/// https://github.com/chenshuo/muduo
+/// muduo buf:A buffer class modeled after org.jboss.netty.buffer.ChannelBuffer
+///
+/// @code
+/// +-------------------+------------------+------------------+
+/// | prependable bytes |  readable bytes  |  writable bytes  |
+/// |                   |     (CONTENT)    |                  |
+/// +-------------------+------------------+------------------+
+/// |                   |                  |                  |
+/// 0      <=      readerIndex   <=   writerIndex    <=     size
+///
+/// @endcode
+
+
+
 #include <sys/types.h>
 #include "jemalloc_define.h"
 

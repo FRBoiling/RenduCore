@@ -7,9 +7,10 @@
 #include <logger.h>
 
 Server::Server() {
+    bzero(&server_, sizeof(server_));
     //初始化网络事件循环
-    server_->event_loop= aeCreateEventLoop(server_->max_client_count);
-    if (server_->event_loop == NULL) {
+    server_.event_loop= aeCreateEventLoop(server_.max_client_count);
+    if (server_.event_loop == NULL) {
         error("Failed creating the event loop. Error message: '%s'", strerror(errno));
         exit(1);
     }
@@ -23,15 +24,15 @@ Server::~Server() {
 void Server::bind(int port) {
 
     //aeCreateTimeEvent(loop, 1000, serverCron, NULL, NULL);
-    server_->port = port;
-    server_->listen_fd = anetTcpServer(server_->err_info, server_->port, NULL, server_->tcp_backlog);
-    if (server_->listen_fd != ANET_ERR) {
-        anetNonBlock(server_->err_info, server_->listen_fd);
+    server_.port = port;
+    server_.listen_fd = anetTcpServer(server_.err_info, server_.port, NULL, server_.tcp_backlog);
+    if (server_.listen_fd != ANET_ERR) {
+        anetNonBlock(server_.err_info, server_.listen_fd);
     }
 
-    if (aeCreateFileEvent(server_->event_loop, server_->listen_fd, AE_READABLE, acceptTcpHandler, this) != AE_ERR) {
+    if (aeCreateFileEvent(server_.event_loop, server_.listen_fd, AE_READABLE, acceptTcpHandler, this) != AE_ERR) {
         char conn_info[64];
-        anetFormatSock(server_->listen_fd, conn_info, sizeof(conn_info));
+        anetFormatSock(server_.listen_fd, conn_info, sizeof(conn_info));
         printf("listen on: %s\n", conn_info);
     }
 }
@@ -157,8 +158,8 @@ void Server::readEventHandler(aeEventLoop *loop, int fd, void *data, int mask)
 
 
 void Server::run() {
-    aeMain(server_->event_loop);
-    aeDeleteEventLoop(server_->event_loop);
+    aeMain(server_.event_loop);
+    aeDeleteEventLoop(server_.event_loop);
 }
 
 

@@ -2,8 +2,8 @@
 // Created by boil on 18-7-25.
 //
 
-#ifndef SERVERCLUSTER_CLIENT_H
-#define SERVERCLUSTER_CLIENT_H
+#ifndef server_.LUSTER_CLIENT_H
+#define server_.LUSTER_CLIENT_H
 
 
 class client {

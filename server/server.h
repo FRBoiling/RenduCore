@@ -46,7 +46,7 @@ public:
     void shutdownGracefully() override;
     void run();
 private:
-    server_t *server_;
+    server_t server_;
 
     static void acceptTcpHandler(aeEventLoop *loop, int fd, void *data, int mask);
     static void readEventHandler(aeEventLoop *loop, int fd, void *data, int mask);
