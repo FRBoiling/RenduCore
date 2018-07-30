@@ -7,8 +7,8 @@ add_definitions(-DOS_LINUX)
 project(ServerCluster)
 
 # 引入子目录
-ADD_SUBDIRECTORY(utillib)
-ADD_SUBDIRECTORY(loglib)
+ADD_SUBDIRECTORY(util)
+ADD_SUBDIRECTORY(log)
 ADD_SUBDIRECTORY(core)
 ADD_SUBDIRECTORY(gate)
 ADD_SUBDIRECTORY(global)

@@ -1,6 +1,0 @@
-AUX_SOURCE_DIRECTORY(. loglib_Src)
-
-ADD_LIBRARY(log_lib ${loglib_Src})
-
-INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/utillib)
-TARGET_LINK_LIBRARIES(log_lib util_lib)
