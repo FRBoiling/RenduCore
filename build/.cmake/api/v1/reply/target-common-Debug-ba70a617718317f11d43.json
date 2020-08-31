@@ -1,0 +1,1506 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "src/common/libcommon.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"add_dependencies",
+			"add_definitions",
+			"include",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"src/common/CMakeLists.txt",
+			"cmake/showoptions.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 61,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 86,
+				"parent" : 4
+			},
+			{
+				"file" : 1,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 42,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 53,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g  "
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-Wno-narrowing"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-Wno-deprecated-register"
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				},
+				{
+					"fragment" : "-Xclang -emit-pch -Xclang -include -Xclang /home/boil/GithubRepository/ServerCluster/build/src/common/CMakeFiles/common.dir/cmake_pch.hxx"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "FMT_USE_DELETED_FUNCTIONS"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "FMT_USE_EXTERN_TEMPLATES"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "FMT_USE_OVERRIDE"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "FMT_USE_RVALUE_REFERENCES"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "FMT_USE_VARIADIC_TEMPLATES"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "HAVE_SSE2"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "NO_BUFFERPOOL"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "NO_CORE_FUNCS"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "SFMT_MEXP=19937"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "TRINITY_API_EXPORT_COMMON"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "_BUILD_DIRECTIVE=\"Debug\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/build"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Asio"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Collision"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Collision/Management"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Collision/Maps"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Collision/Models"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Configuration"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Cryptography"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Cryptography/Authentication"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/DataStores"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Debugging"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Encoding"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/IPLocation"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Logging"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Metric"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Platform"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Threading"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Utilities"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/build/src/common"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/process"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/argon2"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/fmt"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/g3dlite/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/recastnavigation/Detour/Include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/SFMT"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/utf8cpp"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/valgrind"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g  "
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-Wno-narrowing"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-Wno-deprecated-register"
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				},
+				{
+					"fragment" : "-Xclang -include-pch -Xclang /home/boil/GithubRepository/ServerCluster/build/src/common/CMakeFiles/common.dir/cmake_pch.hxx.pch"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "FMT_USE_DELETED_FUNCTIONS"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "FMT_USE_EXTERN_TEMPLATES"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "FMT_USE_OVERRIDE"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "FMT_USE_RVALUE_REFERENCES"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "FMT_USE_VARIADIC_TEMPLATES"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "HAVE_SSE2"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "NO_BUFFERPOOL"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "NO_CORE_FUNCS"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "SFMT_MEXP=19937"
+				},
+				{
+					"backtrace" : 8,
+					"define" : "TRINITY_API_EXPORT_COMMON"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "_BUILD_DIRECTIVE=\"Debug\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/build"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Asio"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Collision"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Collision/Management"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Collision/Maps"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Collision/Models"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Configuration"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Cryptography"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Cryptography/Authentication"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/DataStores"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Debugging"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Encoding"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/IPLocation"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Logging"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Metric"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Platform"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Threading"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/src/common/Utilities"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/boil/GithubRepository/ServerCluster/build/src/common"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/process"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/argon2"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/fmt"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/g3dlite/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/recastnavigation/Detour/Include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/SFMT"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/utf8cpp"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/boil/GithubRepository/ServerCluster/dep/valgrind"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				1,
+				3,
+				7,
+				16,
+				19,
+				24,
+				26,
+				28,
+				30,
+				33,
+				35,
+				37,
+				40,
+				42,
+				44,
+				46,
+				48,
+				50,
+				52,
+				54,
+				57,
+				59,
+				61,
+				63,
+				66,
+				68,
+				70,
+				72,
+				75,
+				77,
+				79,
+				81,
+				83,
+				86,
+				88,
+				90,
+				92,
+				96,
+				103,
+				105,
+				112,
+				115,
+				118,
+				121,
+				125,
+				128
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "g3dlib::@c6b5f0cb5a1edc5087b1"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "Detour::@01fde4152ba93ea8f816"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "fmt::@fb230739351473f4f4d2"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "sfmt::@5ae8dccd5bb62f35e0ac"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "jemalloc::@7ac5940d03897f39e57d"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "argon2::@35c67961889050655613"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "revision_data.h::@c11e494196f9756d45d4"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "server"
+	},
+	"id" : "common::@af79f3804eddddbfa7f1",
+	"name" : "common",
+	"nameOnDisk" : "libcommon.a",
+	"paths" : 
+	{
+		"build" : "src/common",
+		"source" : "src/common"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		},
+		{
+			"name" : "Asio",
+			"sourceIndexes" : 
+			[
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
+		},
+		{
+			"name" : "Collision",
+			"sourceIndexes" : 
+			[
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22
+			]
+		},
+		{
+			"name" : "Collision\\Management",
+			"sourceIndexes" : 
+			[
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31
+			]
+		},
+		{
+			"name" : "Collision\\Maps",
+			"sourceIndexes" : 
+			[
+				32,
+				33,
+				34,
+				35,
+				36
+			]
+		},
+		{
+			"name" : "Collision\\Models",
+			"sourceIndexes" : 
+			[
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43
+			]
+		},
+		{
+			"name" : "Configuration",
+			"sourceIndexes" : 
+			[
+				44,
+				45,
+				46,
+				47
+			]
+		},
+		{
+			"name" : "Cryptography",
+			"sourceIndexes" : 
+			[
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65
+			]
+		},
+		{
+			"name" : "Cryptography\\Authentication",
+			"sourceIndexes" : 
+			[
+				66,
+				67
+			]
+		},
+		{
+			"name" : "DataStores",
+			"sourceIndexes" : 
+			[
+				68,
+				69
+			]
+		},
+		{
+			"name" : "Encoding",
+			"sourceIndexes" : 
+			[
+				70,
+				71,
+				72,
+				73,
+				74
+			]
+		},
+		{
+			"name" : "IPLocation",
+			"sourceIndexes" : 
+			[
+				75,
+				76
+			]
+		},
+		{
+			"name" : "Logging",
+			"sourceIndexes" : 
+			[
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91
+			]
+		},
+		{
+			"name" : "Metric",
+			"sourceIndexes" : 
+			[
+				92,
+				93
+			]
+		},
+		{
+			"name" : "Threading",
+			"sourceIndexes" : 
+			[
+				94,
+				95,
+				96,
+				97,
+				98
+			]
+		},
+		{
+			"name" : "Utilities",
+			"sourceIndexes" : 
+			[
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113,
+				114,
+				115,
+				116,
+				117,
+				118,
+				119,
+				120,
+				121,
+				122,
+				123,
+				124,
+				125,
+				126,
+				127
+			]
+		},
+		{
+			"name" : "Debugging",
+			"sourceIndexes" : 
+			[
+				128,
+				129
+			]
+		},
+		{
+			"name" : "Precompile Header File",
+			"sourceIndexes" : 
+			[
+				130
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"path" : "build/src/common/CMakeFiles/common.dir/cmake_pch.hxx.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Banner.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Banner.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Common.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Common.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/CompilerDefs.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Define.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/GitRevision.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/GitRevision.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Asio/AsioHacksFwd.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Asio/DeadlineTimer.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Asio/IoContext.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Asio/IpAddress.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Asio/IpNetwork.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Asio/Resolver.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Asio/Strand.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Collision/BoundingIntervalHierarchy.cpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/BoundingIntervalHierarchy.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/BoundingIntervalHierarchyWrapper.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Collision/DynamicTree.cpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/DynamicTree.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/RegularGrid.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/VMapDefinitions.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/Management/IVMapManager.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Collision/Management/MMapFactory.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/Management/MMapFactory.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Collision/Management/MMapManager.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/Management/MMapManager.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Collision/Management/VMapFactory.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/Management/VMapFactory.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Collision/Management/VMapManager2.cpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/Management/VMapManager2.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/Maps/MapDefines.h",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Collision/Maps/MapTree.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/Maps/MapTree.h",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Collision/Maps/TileAssembler.cpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/Maps/TileAssembler.h",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Collision/Models/GameObjectModel.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/Models/GameObjectModel.h",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/Models/ModelIgnoreFlags.h",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Collision/Models/ModelInstance.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/Models/ModelInstance.h",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Collision/Models/WorldModel.cpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Collision/Models/WorldModel.h",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Configuration/BuiltInConfig.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Configuration/BuiltInConfig.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Configuration/Config.cpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Configuration/Config.h",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Cryptography/AES.cpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Cryptography/AES.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Cryptography/ARC4.cpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Cryptography/ARC4.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Cryptography/Argon2.cpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Cryptography/Argon2.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Cryptography/BigNumber.cpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Cryptography/BigNumber.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Cryptography/CryptoGenerics.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Cryptography/HMACSHA1.cpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Cryptography/HMACSHA1.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Cryptography/OpenSSLCrypto.cpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Cryptography/OpenSSLCrypto.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Cryptography/SHA1.cpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Cryptography/SHA1.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Cryptography/TOTP.cpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Cryptography/TOTP.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Cryptography/WardenKeyGeneration.h",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Cryptography/Authentication/AuthCrypt.cpp",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Cryptography/Authentication/AuthCrypt.h",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/DataStores/DBCFileLoader.cpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/DataStores/DBCFileLoader.h",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Encoding/Base32.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Encoding/Base32.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Encoding/Base64.cpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Encoding/Base64.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Encoding/BaseEncoding.h",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/IPLocation/IPLocation.cpp",
+			"sourceGroupIndex" : 12
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/IPLocation/IPLocation.h",
+			"sourceGroupIndex" : 12
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Logging/Appender.cpp",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Logging/Appender.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Logging/AppenderConsole.cpp",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Logging/AppenderConsole.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Logging/AppenderFile.cpp",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Logging/AppenderFile.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Logging/Log.cpp",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Logging/Log.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Logging/LogCommon.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Logging/LogMessage.cpp",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Logging/LogMessage.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Logging/LogOperation.cpp",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Logging/LogOperation.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Logging/Logger.cpp",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Logging/Logger.h",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Metric/Metric.cpp",
+			"sourceGroupIndex" : 14
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Metric/Metric.h",
+			"sourceGroupIndex" : 14
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Threading/LockedQueue.h",
+			"sourceGroupIndex" : 15
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Threading/MPSCQueue.h",
+			"sourceGroupIndex" : 15
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Threading/ProcessPriority.cpp",
+			"sourceGroupIndex" : 15
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Threading/ProcessPriority.h",
+			"sourceGroupIndex" : 15
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Threading/ProducerConsumerQueue.h",
+			"sourceGroupIndex" : 15
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/AsyncCallbackProcessor.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/ByteConverter.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/Containers.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/Duration.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Utilities/EventMap.cpp",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/EventMap.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Utilities/EventProcessor.cpp",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/EventProcessor.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/FuzzyFind.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/Hash.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/IteratorPair.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/MessageBuffer.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/Optional.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Utilities/Random.cpp",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/Random.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/Regex.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Utilities/SFMTRand.cpp",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/SFMTRand.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/SmartEnum.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Utilities/StartProcess.cpp",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/StartProcess.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/StringFormat.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Utilities/TaskScheduler.cpp",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/TaskScheduler.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/Timer.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/Tuples.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Utilities/Util.cpp",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/Util.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Utilities/advstd.h",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/common/Debugging/Errors.cpp",
+			"sourceGroupIndex" : 17
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/common/Debugging/Errors.h",
+			"sourceGroupIndex" : 17
+		},
+		{
+			"backtrace" : 0,
+			"path" : "build/src/common/CMakeFiles/common.dir/cmake_pch.hxx",
+			"sourceGroupIndex" : 18
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

@@ -1,0 +1,491 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						22
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "dep",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "dep"
+				},
+				{
+					"build" : "dep/threads",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/threads"
+				},
+				{
+					"build" : "dep/process",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/process"
+				},
+				{
+					"build" : "dep/zlib",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/zlib"
+				},
+				{
+					"build" : "dep/g3dlite",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/g3dlite",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "dep/recastnavigation",
+					"childIndexes" : 
+					[
+						7,
+						8
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/recastnavigation"
+				},
+				{
+					"build" : "dep/recastnavigation/Detour",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 0,
+					"source" : "dep/recastnavigation/Detour",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "dep/recastnavigation/Recast",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 0,
+					"source" : "dep/recastnavigation/Recast",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "dep/fmt",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/fmt",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "dep/SFMT",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/SFMT",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "dep/utf8cpp",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/utf8cpp"
+				},
+				{
+					"build" : "dep/valgrind",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/valgrind"
+				},
+				{
+					"build" : "dep/openssl",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/openssl"
+				},
+				{
+					"build" : "dep/jemalloc",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/jemalloc",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "dep/argon2",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/argon2",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "dep/mysql",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/mysql"
+				},
+				{
+					"build" : "dep/readline",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/readline"
+				},
+				{
+					"build" : "dep/gsoap",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/gsoap",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "dep/efsw",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/efsw"
+				},
+				{
+					"build" : "dep/bzip2",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/bzip2"
+				},
+				{
+					"build" : "dep/libmpq",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "dep/libmpq",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						23,
+						24
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/genrev",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 0,
+					"source" : "src/genrev",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/common",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 22,
+					"projectIndex" : 0,
+					"source" : "src/common",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24
+					],
+					"name" : "TrinityCore",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 7,
+					"id" : "Detour::@01fde4152ba93ea8f816",
+					"jsonFile" : "target-Detour-Debug-4c5e11e79e3e32db6bc7.json",
+					"name" : "Detour",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "Recast::@a1629fe1172298c2fe29",
+					"jsonFile" : "target-Recast-Debug-0e8eca13258648f06dee.json",
+					"name" : "Recast",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "argon2::@35c67961889050655613",
+					"jsonFile" : "target-argon2-Debug-4a1d95d2585f60e2ffbc.json",
+					"name" : "argon2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "common::@af79f3804eddddbfa7f1",
+					"jsonFile" : "target-common-Debug-ba70a617718317f11d43.json",
+					"name" : "common",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "fmt::@fb230739351473f4f4d2",
+					"jsonFile" : "target-fmt-Debug-3009fb445464a0d3c0d2.json",
+					"name" : "fmt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "g3dlib::@c6b5f0cb5a1edc5087b1",
+					"jsonFile" : "target-g3dlib-Debug-6391e487c075239f40db.json",
+					"name" : "g3dlib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "gsoap::@813c8bcfc4749165eff6",
+					"jsonFile" : "target-gsoap-Debug-7d2adce586e29b520cfa.json",
+					"name" : "gsoap",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "jemalloc::@7ac5940d03897f39e57d",
+					"jsonFile" : "target-jemalloc-Debug-a6f9e0319d09f63a83d3.json",
+					"name" : "jemalloc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 21,
+					"id" : "mpq::@54058fdde90666fe2fd4",
+					"jsonFile" : "target-mpq-Debug-763060fd4997e4223a94.json",
+					"name" : "mpq",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 23,
+					"id" : "revision_data.h::@c11e494196f9756d45d4",
+					"jsonFile" : "target-revision_data.h-Debug-e197b6558c5b4f337d28.json",
+					"name" : "revision_data.h",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "sfmt::@5ae8dccd5bb62f35e0ac",
+					"jsonFile" : "target-sfmt-Debug-f5c1c70250769e8ee086.json",
+					"name" : "sfmt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Debug-89459a06bc71a616ae99.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/boil/GithubRepository/ServerCluster/build",
+		"source" : "/home/boil/GithubRepository/ServerCluster"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

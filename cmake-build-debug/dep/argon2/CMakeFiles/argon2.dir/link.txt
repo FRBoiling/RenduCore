@@ -1,0 +1,2 @@
+/usr/bin/ar qc libargon2.a  CMakeFiles/argon2.dir/argon2/argon2.c.o CMakeFiles/argon2.dir/argon2/blake2/blake2b.c.o CMakeFiles/argon2.dir/argon2/core.c.o CMakeFiles/argon2.dir/argon2/encoding.c.o CMakeFiles/argon2.dir/argon2/opt.c.o CMakeFiles/argon2.dir/argon2/thread.c.o
+/usr/bin/ranlib libargon2.a
