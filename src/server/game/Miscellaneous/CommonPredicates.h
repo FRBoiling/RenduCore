@@ -24,12 +24,12 @@
 class Unit;
 class WorldObject;
 
-namespace Trinity
+namespace Rendu
 {
     namespace Predicates
     {
         /// Only returns true for the given attacker's current victim, if any
-        class TC_GAME_API IsVictimOf
+        class RENDU_GAME_API IsVictimOf
         {
             public:
                 IsVictimOf(Unit const* attacker);
@@ -39,7 +39,7 @@ namespace Trinity
         };
 
         template <typename PRED>
-        class TC_GAME_API Inverter
+        class RENDU_GAME_API Inverter
         {
             public:
                 Inverter(PRED&& p) : _child(std::move(p)) { }

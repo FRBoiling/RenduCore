@@ -1104,7 +1104,7 @@ void ScriptMgr::ReleaseScriptContext(std::string const& context)
 std::shared_ptr<ModuleReference>
     ScriptMgr::AcquireModuleReferenceOfScriptName(std::string const& scriptname) const
 {
-#ifdef TRINITY_API_USE_DYNAMIC_LINKING
+#ifdef RENDU_API_USE_DYNAMIC_LINKING
     // Returns the reference to the module of the given scriptname
     return ScriptReloadMgr::AcquireModuleReferenceOfContext(
         sScriptRegistryCompositum->GetScriptContextOfScriptName(scriptname));
@@ -1113,7 +1113,7 @@ std::shared_ptr<ModuleReference>
     // Something went wrong when this function is used in
     // a static linked context.
     WPAbort();
-#endif // #ifndef TRINITY_API_USE_DYNAMIC_LINKING
+#endif // #ifndef RENDU_API_USE_DYNAMIC_LINKING
 }
 
 void ScriptMgr::Unload()
@@ -2332,30 +2332,30 @@ GroupScript::GroupScript(char const* name)
 }
 
 // Specialize for each script type class like so:
-template class TC_GAME_API ScriptRegistry<SpellScriptLoader>;
-template class TC_GAME_API ScriptRegistry<ServerScript>;
-template class TC_GAME_API ScriptRegistry<WorldScript>;
-template class TC_GAME_API ScriptRegistry<FormulaScript>;
-template class TC_GAME_API ScriptRegistry<WorldMapScript>;
-template class TC_GAME_API ScriptRegistry<InstanceMapScript>;
-template class TC_GAME_API ScriptRegistry<BattlegroundMapScript>;
-template class TC_GAME_API ScriptRegistry<ItemScript>;
-template class TC_GAME_API ScriptRegistry<CreatureScript>;
-template class TC_GAME_API ScriptRegistry<GameObjectScript>;
-template class TC_GAME_API ScriptRegistry<AreaTriggerScript>;
-template class TC_GAME_API ScriptRegistry<BattlefieldScript>;
-template class TC_GAME_API ScriptRegistry<BattlegroundScript>;
-template class TC_GAME_API ScriptRegistry<OutdoorPvPScript>;
-template class TC_GAME_API ScriptRegistry<CommandScript>;
-template class TC_GAME_API ScriptRegistry<WeatherScript>;
-template class TC_GAME_API ScriptRegistry<AuctionHouseScript>;
-template class TC_GAME_API ScriptRegistry<ConditionScript>;
-template class TC_GAME_API ScriptRegistry<VehicleScript>;
-template class TC_GAME_API ScriptRegistry<DynamicObjectScript>;
-template class TC_GAME_API ScriptRegistry<TransportScript>;
-template class TC_GAME_API ScriptRegistry<AchievementCriteriaScript>;
-template class TC_GAME_API ScriptRegistry<PlayerScript>;
-template class TC_GAME_API ScriptRegistry<GuildScript>;
-template class TC_GAME_API ScriptRegistry<GroupScript>;
-template class TC_GAME_API ScriptRegistry<UnitScript>;
-template class TC_GAME_API ScriptRegistry<AccountScript>;
+template class RENDU_GAME_API ScriptRegistry<SpellScriptLoader>;
+template class RENDU_GAME_API ScriptRegistry<ServerScript>;
+template class RENDU_GAME_API ScriptRegistry<WorldScript>;
+template class RENDU_GAME_API ScriptRegistry<FormulaScript>;
+template class RENDU_GAME_API ScriptRegistry<WorldMapScript>;
+template class RENDU_GAME_API ScriptRegistry<InstanceMapScript>;
+template class RENDU_GAME_API ScriptRegistry<BattlegroundMapScript>;
+template class RENDU_GAME_API ScriptRegistry<ItemScript>;
+template class RENDU_GAME_API ScriptRegistry<CreatureScript>;
+template class RENDU_GAME_API ScriptRegistry<GameObjectScript>;
+template class RENDU_GAME_API ScriptRegistry<AreaTriggerScript>;
+template class RENDU_GAME_API ScriptRegistry<BattlefieldScript>;
+template class RENDU_GAME_API ScriptRegistry<BattlegroundScript>;
+template class RENDU_GAME_API ScriptRegistry<OutdoorPvPScript>;
+template class RENDU_GAME_API ScriptRegistry<CommandScript>;
+template class RENDU_GAME_API ScriptRegistry<WeatherScript>;
+template class RENDU_GAME_API ScriptRegistry<AuctionHouseScript>;
+template class RENDU_GAME_API ScriptRegistry<ConditionScript>;
+template class RENDU_GAME_API ScriptRegistry<VehicleScript>;
+template class RENDU_GAME_API ScriptRegistry<DynamicObjectScript>;
+template class RENDU_GAME_API ScriptRegistry<TransportScript>;
+template class RENDU_GAME_API ScriptRegistry<AchievementCriteriaScript>;
+template class RENDU_GAME_API ScriptRegistry<PlayerScript>;
+template class RENDU_GAME_API ScriptRegistry<GuildScript>;
+template class RENDU_GAME_API ScriptRegistry<GroupScript>;
+template class RENDU_GAME_API ScriptRegistry<UnitScript>;
+template class RENDU_GAME_API ScriptRegistry<AccountScript>;

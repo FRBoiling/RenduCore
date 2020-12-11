@@ -25,7 +25,7 @@
 class Creature;
 class Totem;
 
-class TC_GAME_API TotemAI : public NullCreatureAI
+class RENDU_GAME_API TotemAI : public NullCreatureAI
 {
     public:
         explicit TotemAI(Creature* creature);

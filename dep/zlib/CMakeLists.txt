@@ -47,7 +47,7 @@ else()
 
   target_link_libraries(zlib
     PRIVATE
-      trinity-dependency-interface)
+      rendu-dependency-interface)
 
   set_target_properties(zlib
       PROPERTIES

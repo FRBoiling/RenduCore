@@ -2179,8 +2179,8 @@ void AuraEffect::HandleFeignDeath(AuraApplication const* aurApp, uint8 mode, boo
         */
 
         UnitList targets;
-        Trinity::AnyUnfriendlyUnitInObjectRangeCheck u_check(target, target, target->GetMap()->GetVisibilityRange());
-        Trinity::UnitListSearcher<Trinity::AnyUnfriendlyUnitInObjectRangeCheck> searcher(target, targets, u_check);
+        Rendu::AnyUnfriendlyUnitInObjectRangeCheck u_check(target, target, target->GetMap()->GetVisibilityRange());
+        Rendu::UnitListSearcher<Rendu::AnyUnfriendlyUnitInObjectRangeCheck> searcher(target, targets, u_check);
         Cell::VisitAllObjects(target, searcher, target->GetMap()->GetVisibilityRange());
         for (UnitList::iterator iter = targets.begin(); iter != targets.end(); ++iter)
         {
@@ -5777,10 +5777,10 @@ void AuraEffect::HandleRaidProcFromChargeWithValueAuraProc(AuraApplication* aurA
     target->CastSpell(target, triggerSpellId, args);
 }
 
-template TC_GAME_API void AuraEffect::GetTargetList(std::list<Unit*>&) const;
-template TC_GAME_API void AuraEffect::GetTargetList(std::deque<Unit*>&) const;
-template TC_GAME_API void AuraEffect::GetTargetList(std::vector<Unit*>&) const;
+template RENDU_GAME_API void AuraEffect::GetTargetList(std::list<Unit*>&) const;
+template RENDU_GAME_API void AuraEffect::GetTargetList(std::deque<Unit*>&) const;
+template RENDU_GAME_API void AuraEffect::GetTargetList(std::vector<Unit*>&) const;
 
-template TC_GAME_API void AuraEffect::GetApplicationList(std::list<AuraApplication*>&) const;
-template TC_GAME_API void AuraEffect::GetApplicationList(std::deque<AuraApplication*>&) const;
-template TC_GAME_API void AuraEffect::GetApplicationList(std::vector<AuraApplication*>&) const;
+template RENDU_GAME_API void AuraEffect::GetApplicationList(std::list<AuraApplication*>&) const;
+template RENDU_GAME_API void AuraEffect::GetApplicationList(std::deque<AuraApplication*>&) const;
+template RENDU_GAME_API void AuraEffect::GetApplicationList(std::vector<AuraApplication*>&) const;

@@ -17,4 +17,4 @@
 
 #include "SharedDefines.h"
 
-ServerProcessTypes Trinity::Impl::CurrentServerProcessHolder::_type = NUM_SERVER_PROCESS_TYPES;
+ServerProcessTypes Rendu::Impl::CurrentServerProcessHolder::_type = NUM_SERVER_PROCESS_TYPES;

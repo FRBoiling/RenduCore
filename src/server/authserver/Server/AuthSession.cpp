@@ -390,7 +390,7 @@ void AuthSession::LogonChallengeCallback(PreparedQueryResult result)
         _totpSecret = fields[9].GetBinary();
         if (auto const& secret = sSecretMgr->GetSecret(SECRET_TOTP_MASTER_KEY))
         {
-            bool success = Trinity::Crypto::AEDecrypt<Trinity::Crypto::AES>(*_totpSecret, *secret);
+            bool success = Rendu::Crypto::AEDecrypt<Rendu::Crypto::AES>(*_totpSecret, *secret);
             if (!success)
             {
                 pkt << uint8(WOW_FAIL_DB_BUSY);
@@ -572,7 +572,7 @@ bool AuthSession::HandleLogonProof()
             GetReadBuffer().ReadCompleted(sizeof(size) + size);
 
             uint32 incomingToken = atoi(token.c_str());
-            tokenSuccess = Trinity::Crypto::TOTP::ValidateToken(*_totpSecret, incomingToken);
+            tokenSuccess = Rendu::Crypto::TOTP::ValidateToken(*_totpSecret, incomingToken);
             memset(_totpSecret->data(), 0, _totpSecret->size());
         }
         else if (!sentToken && !_totpSecret)

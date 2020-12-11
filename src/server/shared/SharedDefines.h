@@ -3861,18 +3861,18 @@ enum WorldState : uint32
     WS_DAILY_CALENDAR_DELETION_OLD_EVENTS_TIME = 20009,      // Next daily calendar deletions of old events time
 };
 
-namespace Trinity
+namespace Rendu
 {
 namespace Impl
 {
-    struct TC_SHARED_API CurrentServerProcessHolder
+    struct RENDU_SHARED_API CurrentServerProcessHolder
     {
         static ServerProcessTypes type() { return _type; }
         static ServerProcessTypes _type;
     };
 }
 }
-#define THIS_SERVER_PROCESS (Trinity::Impl::CurrentServerProcessHolder::type())
+#define THIS_SERVER_PROCESS (Rendu::Impl::CurrentServerProcessHolder::type())
 
 #define MAX_CREATURE_SPELL_DATA_SLOT 4
 

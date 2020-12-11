@@ -30,7 +30,7 @@ target_include_directories(Recast
 
 target_link_libraries(Recast
   PRIVATE
-    trinity-dependency-interface
+    rendu-dependency-interface
   PUBLIC
     zlib)
 

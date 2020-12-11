@@ -303,7 +303,7 @@ void PlayerDump::InitializeTables()
                 // item0 - item18
                 for (uint32 j = 0; j < EQUIPMENT_SLOT_END; ++j)
                 {
-                    std::string itColumn = Trinity::StringFormat("item%u", j);
+                    std::string itColumn = Rendu::StringFormat("item%u", j);
                     MarkDependentColumn(t, itColumn, GUID_TYPE_ITEM);
                 }
                 break;

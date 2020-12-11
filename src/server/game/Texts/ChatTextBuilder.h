@@ -25,7 +25,7 @@
 class WorldObject;
 class WorldPacket;
 
-namespace Trinity
+namespace Rendu
 {
     class BroadcastTextBuilder
     {
@@ -77,6 +77,6 @@ namespace Trinity
             va_list* _args;
     };
 }
-// namespace Trinity
+// namespace Rendu
 
 #endif // __CHATTEXT_BUILDER_H

@@ -19,7 +19,7 @@
 #include "Errors.h"
 #include "Optional.h"
 
-#ifndef TRINITY_API_USE_DYNAMIC_LINKING
+#ifndef RENDU_API_USE_DYNAMIC_LINKING
 
 // This method should never be called
 std::shared_ptr<ModuleReference>
@@ -64,7 +64,7 @@ ScriptReloadMgr* ScriptReloadMgr::instance()
 
 namespace fs = boost::filesystem;
 
-#if TRINITY_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
     #include <windows.h>
 #else // Posix and Apple
     #include <dlfcn.h>
@@ -78,7 +78,7 @@ namespace fs = boost::filesystem;
 // Returns "" on Windows and "lib" on posix.
 static char const* GetSharedLibraryPrefix()
 {
-#if TRINITY_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
     return "";
 #else // Posix
     return "lib";
@@ -88,16 +88,16 @@ static char const* GetSharedLibraryPrefix()
 // Returns "dll" on Windows, "dylib" on OS X, and "so" on posix.
 static char const* GetSharedLibraryExtension()
 {
-#if TRINITY_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
     return "dll";
-#elif TRINITY_PLATFORM == TRINITY_PLATFORM_APPLE
+#elif RENDU_PLATFORM == TRINITY_PLATFORM_APPLE
     return "dylib";
 #else // Posix
     return "so";
 #endif
 }
 
-#if TRINITY_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
 typedef HMODULE HandleType;
 #else // Posix
 typedef void* HandleType;
@@ -126,7 +126,7 @@ public:
     void operator() (HandleType handle) const
     {
         // Unload the associated shared library.
-#if TRINITY_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
         bool success = (FreeLibrary(handle) != 0);
 #else // Posix
         bool success = (dlclose(handle) == 0);
@@ -236,7 +236,7 @@ private:
 template<typename Fn>
 static bool GetFunctionFromSharedLibrary(HandleType handle, std::string const& name, Fn& fn)
 {
-#if TRINITY_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
     fn = reinterpret_cast<Fn>(GetProcAddress(handle, name.c_str()));
 #else // Posix
     fn = reinterpret_cast<Fn>(dlsym(handle, name.c_str()));
@@ -255,7 +255,7 @@ Optional<std::shared_ptr<ScriptModule>>
             return path;
     }();
 
-#if TRINITY_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
     HandleType handle = LoadLibrary(load_path.generic_string().c_str());
 #else // Posix
     HandleType handle = dlopen(load_path.generic_string().c_str(), RTLD_LAZY);
@@ -309,12 +309,12 @@ Optional<std::shared_ptr<ScriptModule>>
 static bool HasValidScriptModuleName(std::string const& name)
 {
     // Detects scripts_NAME.dll's / .so's
-    static Trinity::regex const regex(
-        Trinity::StringFormat("^%s[sS]cripts_[a-zA-Z0-9_]+\\.%s$",
+    static Rendu::regex const regex(
+        Rendu::StringFormat("^%s[sS]cripts_[a-zA-Z0-9_]+\\.%s$",
             GetSharedLibraryPrefix(),
             GetSharedLibraryExtension()));
 
-    return Trinity::regex_match(name, regex);
+    return Rendu::regex_match(name, regex);
 }
 
 /// File watcher responsible for watching shared libraries
@@ -367,7 +367,7 @@ template<typename... T>
 static int InvokeCMakeCommand(T&&... args)
 {
     auto const executable = BuiltInConfig::GetCMakeCommand();
-    return Trinity::StartProcess(executable, {
+    return Rendu::StartProcess(executable, {
         executable,
         std::forward<T>(args)...
     }, "scripts.hotswap");
@@ -375,10 +375,10 @@ static int InvokeCMakeCommand(T&&... args)
 
 /// Invokes an asynchronous CMake process with the given arguments
 template<typename... T>
-static std::shared_ptr<Trinity::AsyncProcessResult> InvokeAsyncCMakeCommand(T&&... args)
+static std::shared_ptr<Rendu::AsyncProcessResult> InvokeAsyncCMakeCommand(T&&... args)
 {
     auto const executable = BuiltInConfig::GetCMakeCommand();
-    return Trinity::StartAsyncProcess(executable, {
+    return Rendu::StartAsyncProcess(executable, {
         executable,
         std::forward<T>(args)...
     }, "scripts.hotswap");
@@ -399,7 +399,7 @@ static std::string CalculateScriptModuleProjectName(std::string const& module)
 /// could block the rebuild of new shared libraries.
 static bool IsDebuggerBlockingRebuild()
 {
-#if TRINITY_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
     if (IsDebuggerPresent())
         return true;
 #endif
@@ -459,7 +459,7 @@ class HotSwapScriptReloadMgr final
         // Type of the current running job
         BuildJobType type_;
         // The async process result of the current job
-        std::shared_ptr<Trinity::AsyncProcessResult> async_result_;
+        std::shared_ptr<Rendu::AsyncProcessResult> async_result_;
 
     public:
         explicit BuildJob(std::string script_module_name, std::string script_module_project_name,
@@ -484,7 +484,7 @@ class HotSwapScriptReloadMgr final
 
         BuildJobType GetType() const { return type_; }
 
-        std::shared_ptr<Trinity::AsyncProcessResult> const& GetProcess() const
+        std::shared_ptr<Rendu::AsyncProcessResult> const& GetProcess() const
         {
             ASSERT(async_result_, "Tried to access an empty process handle!");
             return async_result_;
@@ -492,7 +492,7 @@ class HotSwapScriptReloadMgr final
 
         /// Updates the current running job with the given type and async result
         void UpdateCurrentJob(BuildJobType type,
-                              std::shared_ptr<Trinity::AsyncProcessResult> async_result)
+                              std::shared_ptr<Rendu::AsyncProcessResult> async_result)
         {
             ASSERT(type != BuildJobType::BUILD_JOB_NONE, "None isn't allowed here!");
             ASSERT(async_result, "The async result must not be empty!");
@@ -756,7 +756,7 @@ private:
     static fs::path CalculateTemporaryCachePath()
     {
         auto path = fs::temp_directory_path();
-        path /= Trinity::StringFormat("tc_script_cache_%s_%s",
+        path /= Rendu::StringFormat("tc_script_cache_%s_%s",
             GitRevision::GetBranch(),
             CalculateSHA1Hash(sConfigMgr->GetFilename()).c_str());
 
@@ -770,7 +770,7 @@ private:
 
         // Create the cache path and increment the library counter to use an unique name for each library
         auto cache_path = temporary_cache_path_;
-        cache_path /= Trinity::StringFormat("%s.%u%s",
+        cache_path /= Rendu::StringFormat("%s.%u%s",
             path.stem().generic_string().c_str(),
             _unique_library_name_counter++,
             path.extension().generic_string().c_str());
@@ -1329,7 +1329,7 @@ private:
 
                 auto current_path = fs::current_path();
 
-            #if TRINITY_PLATFORM != TRINITY_PLATFORM_WINDOWS
+            #if RENDU_PLATFORM != TRINITY_PLATFORM_WINDOWS
                 // The worldserver location is ${CMAKE_INSTALL_PREFIX}/bin
                 // on all other platforms then windows
                 current_path = current_path.parent_path();
@@ -1520,8 +1520,8 @@ void LibraryUpdateListener::handleFileAction(efsw::WatchID watchid, std::string 
 /// Returns true when the given path has a known C++ file extension
 static bool HasCXXSourceFileExtension(fs::path const& path)
 {
-    static Trinity::regex const regex("^\\.(h|hpp|c|cc|cpp)$");
-    return Trinity::regex_match(path.extension().generic_string(), regex);
+    static Rendu::regex const regex("^\\.(h|hpp|c|cc|cpp)$");
+    return Rendu::regex_match(path.extension().generic_string(), regex);
 }
 
 SourceUpdateListener::SourceUpdateListener(fs::path path, std::string script_module_name)
@@ -1629,4 +1629,4 @@ ScriptReloadMgr* ScriptReloadMgr::instance()
     return &instance;
 }
 
-#endif // #ifndef TRINITY_API_USE_DYNAMIC_LINKING
+#endif // #ifndef RENDU_API_USE_DYNAMIC_LINKING

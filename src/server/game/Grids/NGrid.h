@@ -28,7 +28,7 @@
 
 #define DEFAULT_VISIBILITY_NOTIFY_PERIOD      1000
 
-class TC_GAME_API GridInfo
+class RENDU_GAME_API GridInfo
 {
 public:
     GridInfo();

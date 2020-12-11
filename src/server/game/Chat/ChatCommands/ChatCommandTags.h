@@ -30,7 +30,7 @@
 #include <type_traits>
 #include <utility>
 
-namespace Trinity
+namespace Rendu
 {
 namespace ChatCommands
 {
@@ -83,7 +83,7 @@ template <typename linktag>
 struct Hyperlink : public ContainerTag
 {
     typedef typename linktag::value_type value_type;
-    typedef advstd::remove_cvref_t<value_type> storage_type;
+    typedef std::__remove_cvref_t<value_type> storage_type;
 
     public:
         operator value_type() const { return val; }
@@ -92,7 +92,7 @@ struct Hyperlink : public ContainerTag
 
         char const* TryConsume(char const* pos)
         {
-            Trinity::Hyperlinks::HyperlinkInfo info = Trinity::Hyperlinks::ParseHyperlink(pos);
+            Rendu::Hyperlinks::HyperlinkInfo info = Rendu::Hyperlinks::ParseHyperlink(pos);
             // invalid hyperlinks cannot be consumed
             if (!info)
                 return nullptr;
@@ -120,7 +120,7 @@ struct Hyperlink : public ContainerTag
 };
 
 // pull in link tags for user convenience
-using namespace ::Trinity::Hyperlinks::LinkTags;
+using namespace ::Rendu::Hyperlinks::LinkTags;
 
 /************************** VARIANT TAG LOGIC *********************************\
 |* This has some special handling over in ChatCommand.h                       *|

@@ -49,7 +49,7 @@ EndScriptData */
 #include <map>
 #include <set>
 
-using namespace Trinity::ChatCommands;
+using namespace Rendu::ChatCommands;
 class debug_commandscript : public CommandScript
 {
 public:
@@ -1084,8 +1084,8 @@ public:
         else
         {
             Creature* passenger = nullptr;
-            Trinity::AllCreaturesOfEntryInRange check(handler->GetSession()->GetPlayer(), entry, 20.0f);
-            Trinity::CreatureSearcher<Trinity::AllCreaturesOfEntryInRange> searcher(handler->GetSession()->GetPlayer(), passenger, check);
+            Rendu::AllCreaturesOfEntryInRange check(handler->GetSession()->GetPlayer(), entry, 20.0f);
+            Rendu::CreatureSearcher<Rendu::AllCreaturesOfEntryInRange> searcher(handler->GetSession()->GetPlayer(), passenger, check);
             Cell::VisitAllObjects(handler->GetSession()->GetPlayer(), searcher, 30.0f);
             if (!passenger || passenger == target)
                 return false;

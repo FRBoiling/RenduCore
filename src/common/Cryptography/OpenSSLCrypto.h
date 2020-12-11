@@ -27,9 +27,9 @@
 namespace OpenSSLCrypto
 {
     /// Needs to be called before threads using openssl are spawned
-    TC_COMMON_API void threadsSetup();
+    RENDU_COMMON_API void threadsSetup();
     /// Needs to be called after threads using openssl are despawned
-    TC_COMMON_API void threadsCleanup();
+    RENDU_COMMON_API void threadsCleanup();
 }
 
 #endif

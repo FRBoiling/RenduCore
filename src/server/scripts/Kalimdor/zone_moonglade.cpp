@@ -147,8 +147,8 @@ public:
         void IsSummonedBy(WorldObject* /*summoner*/) override
         {
             std::list<Player*> playerOnQuestList;
-            Trinity::AnyPlayerInObjectRangeCheck checker(me, 5.0f);
-            Trinity::PlayerListSearcher<Trinity::AnyPlayerInObjectRangeCheck> searcher(me, playerOnQuestList, checker);
+            Rendu::AnyPlayerInObjectRangeCheck checker(me, 5.0f);
+            Rendu::PlayerListSearcher<Rendu::AnyPlayerInObjectRangeCheck> searcher(me, playerOnQuestList, checker);
             Cell::VisitWorldObjects(me, searcher, 5.0f);
             for (std::list<Player*>::const_iterator itr = playerOnQuestList.begin(); itr != playerOnQuestList.end(); ++itr)
             {

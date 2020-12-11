@@ -20,7 +20,7 @@
 
 #include "SQLOperation.h"
 
-class TC_DATABASE_API SQLQueryHolderBase
+class RENDU_DATABASE_API SQLQueryHolderBase
 {
     friend class SQLQueryHolderTask;
     private:
@@ -46,7 +46,7 @@ public:
     }
 };
 
-class TC_DATABASE_API SQLQueryHolderTask : public SQLOperation
+class RENDU_DATABASE_API SQLQueryHolderTask : public SQLOperation
 {
     private:
         SQLQueryHolderBase* m_holder;

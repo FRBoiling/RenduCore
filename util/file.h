@@ -9,8 +9,6 @@
 #include <vector>
 #include "status.h"
 
-namespace handy {
-
 struct file {
     static Status getContent(const std::string& filename, std::string& cont);
     static Status writeContent(const std::string& filename, const std::string& cont);
@@ -24,6 +22,5 @@ struct file {
     static bool fileExists(const std::string& fname);
 };
 
-}
 
 #endif //FILE_H

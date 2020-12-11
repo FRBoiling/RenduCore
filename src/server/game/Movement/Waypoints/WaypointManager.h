@@ -23,7 +23,7 @@
 #include <vector>
 #include <unordered_map>
 
-class TC_GAME_API WaypointMgr
+class RENDU_GAME_API WaypointMgr
 {
     public:
         static WaypointMgr* instance();

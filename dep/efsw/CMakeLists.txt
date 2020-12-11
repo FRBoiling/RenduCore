@@ -76,7 +76,7 @@ if (BUILD_SHARED_LIBS)
 
   target_link_libraries(efsw
     PRIVATE
-      trinity-dependency-interface
+      rendu-dependency-interface
     PUBLIC
       threads
       ${OPTIONAL_LINK_LIBRARIES})

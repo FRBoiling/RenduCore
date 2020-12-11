@@ -6,7 +6,6 @@
 #include <cstdarg>
 #include "util.h"
 
-namespace handy {
 
 inline const char* errstr(){ return strerror(errno); }
 
@@ -75,8 +74,6 @@ inline Status Status::fromFormat(int code, const char* fmt, ...) {
     vsnprintf((char*)r.state_+8, size - 8, fmt, ap);
     va_end(ap);
     return r;
-}
-
 }
 
 #endif //STATUS_H

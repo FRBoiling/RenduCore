@@ -25,7 +25,7 @@
 #include <vector>
 #include <openssl/rand.h>
 
-namespace Trinity
+namespace Rendu
 {
     namespace Impl
     {
@@ -67,7 +67,7 @@ namespace Trinity
             using IV = typename Cipher::IV;
             using Tag = typename Cipher::Tag;
             // select random IV
-            IV iv = Trinity::Impl::CryptoGenericsImpl::GenerateRandomIV<Cipher>();
+            IV iv = Rendu::Impl::CryptoGenericsImpl::GenerateRandomIV<Cipher>();
             Tag tag;
 
             // encrypt data
@@ -77,8 +77,8 @@ namespace Trinity
             ASSERT(success);
 
             // append trailing IV and tag
-            Trinity::Impl::CryptoGenericsImpl::AppendToBack(data, iv);
-            Trinity::Impl::CryptoGenericsImpl::AppendToBack(data, tag);
+            Rendu::Impl::CryptoGenericsImpl::AppendToBack(data, iv);
+            Rendu::Impl::CryptoGenericsImpl::AppendToBack(data, tag);
         }
 
         template <typename Cipher>
@@ -95,8 +95,8 @@ namespace Trinity
             // extract trailing IV and tag
             IV iv;
             Tag tag;
-            Trinity::Impl::CryptoGenericsImpl::SplitFromBack(data, tag);
-            Trinity::Impl::CryptoGenericsImpl::SplitFromBack(data, iv);
+            Rendu::Impl::CryptoGenericsImpl::SplitFromBack(data, tag);
+            Rendu::Impl::CryptoGenericsImpl::SplitFromBack(data, iv);
 
             // decrypt data
             Cipher cipher(false);

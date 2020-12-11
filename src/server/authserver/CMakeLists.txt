@@ -41,7 +41,7 @@ endif()
 
 target_link_libraries(authserver
   PRIVATE
-    trinity-core-interface
+    rendu-core-interface
   PUBLIC
     shared)
 

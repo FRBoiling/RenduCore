@@ -1,26 +1,9 @@
-/*
- * This file is part of the TrinityCore Project. See AUTHORS file for Copyright information
- *
- * This program is free software; you can redistribute it and/or modify it
- * under the terms of the GNU General Public License as published by the
- * Free Software Foundation; either version 2 of the License, or (at your
- * option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
- * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
- * more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program. If not, see <http://www.gnu.org/licenses/>.
- */
-
-#ifndef TRINITY_DEFINE_H
-#define TRINITY_DEFINE_H
+#ifndef RENDU_DEFINE_H
+#define RENDU_DEFINE_H
 
 #include "CompilerDefs.h"
 
-#if TRINITY_COMPILER == TRINITY_COMPILER_GNU
+#if RENDU_COMPILER == RENDU_COMPILER_GNU
 #  if !defined(__STDC_FORMAT_MACROS)
 #    define __STDC_FORMAT_MACROS
 #  endif
@@ -43,19 +26,19 @@
 #include <cinttypes>
 #include <climits>
 
-#define TRINITY_LITTLEENDIAN 0
-#define TRINITY_BIGENDIAN    1
+#define RENDU_LITTLE_ENDIAN 0
+#define RENDU_BIG_ENDIAN    1
 
-#if !defined(TRINITY_ENDIAN)
+#if !defined(RENDU_ENDIAN)
 #  if defined (BOOST_BIG_ENDIAN)
-#    define TRINITY_ENDIAN TRINITY_BIGENDIAN
+#    define RENDU_ENDIAN RENDU_BIG_ENDIAN
 #  else
-#    define TRINITY_ENDIAN TRINITY_LITTLEENDIAN
+#    define RENDU_ENDIAN RENDU_LITTLE_ENDIAN
 #  endif
 #endif
 
-#if TRINITY_PLATFORM == TRINITY_PLATFORM_WINDOWS
-#  define TRINITY_PATH_MAX 260
+#if RENDU_PLATFORM == RENDU_PLATFORM_WINDOWS
+#  define RENDU_PATH_MAX 260
 #  define _USE_MATH_DEFINES
 #  ifndef DECLSPEC_NORETURN
 #    define DECLSPEC_NORETURN __declspec(noreturn)
@@ -63,68 +46,68 @@
 #  ifndef DECLSPEC_DEPRECATED
 #    define DECLSPEC_DEPRECATED __declspec(deprecated)
 #  endif //DECLSPEC_DEPRECATED
-#else // TRINITY_PLATFORM != TRINITY_PLATFORM_WINDOWS
-#  define TRINITY_PATH_MAX PATH_MAX
+#else // RENDU_PLATFORM != RENDU_PLATFORM_WINDOWS
+#  define RENDU_PATH_MAX PATH_MAX
 #  define DECLSPEC_NORETURN
 #  define DECLSPEC_DEPRECATED
-#endif // TRINITY_PLATFORM
+#endif // RENDU_PLATFORM
 
 #if !defined(COREDEBUG)
-#  define TRINITY_INLINE inline
+#  define RENDU_INLINE inline
 #else //COREDEBUG
-#  if !defined(TRINITY_DEBUG)
-#    define TRINITY_DEBUG
-#  endif //TRINITY_DEBUG
-#  define TRINITY_INLINE
+#  if !defined(RENDU_DEBUG)
+#    define RENDU_DEBUG
+#  endif //RENDU_DEBUG
+#  define RENDU_INLINE
 #endif //!COREDEBUG
 
-#if TRINITY_COMPILER == TRINITY_COMPILER_GNU
+#if RENDU_COMPILER == RENDU_COMPILER_GNU
 #  define ATTR_NORETURN __attribute__((__noreturn__))
 #  define ATTR_PRINTF(F, V) __attribute__ ((__format__ (__printf__, F, V)))
 #  define ATTR_DEPRECATED __attribute__((__deprecated__))
-#else //TRINITY_COMPILER != TRINITY_COMPILER_GNU
+#else //RENDU_COMPILER != RENDU_COMPILER_GNU
 #  define ATTR_NORETURN
 #  define ATTR_PRINTF(F, V)
 #  define ATTR_DEPRECATED
-#endif //TRINITY_COMPILER == TRINITY_COMPILER_GNU
+#endif //RENDU_COMPILER == RENDU_COMPILER_GNU
 
-#ifdef TRINITY_API_USE_DYNAMIC_LINKING
-#  if TRINITY_COMPILER == TRINITY_COMPILER_MICROSOFT
-#    define TC_API_EXPORT __declspec(dllexport)
-#    define TC_API_IMPORT __declspec(dllimport)
-#  elif TRINITY_COMPILER == TRINITY_COMPILER_GNU
-#    define TC_API_EXPORT __attribute__((visibility("default")))
-#    define TC_API_IMPORT
+#ifdef RENDU_API_USE_DYNAMIC_LINKING
+#  if RENDU_COMPILER == RENDU_COMPILER_MICROSOFT
+#    define RENDU_API_EXPORT __declspec(dllexport)
+#    define RENDU_API_IMPORT __declspec(dllimport)
+#  elif RENDU_COMPILER == RENDU_COMPILER_GNU
+#    define RENDU_API_EXPORT __attribute__((visibility("default")))
+#    define RENDU_API_IMPORT
 #  else
 #    error compiler not supported!
 #  endif
 #else
-#  define TC_API_EXPORT
-#  define TC_API_IMPORT
+#  define RENDU_API_EXPORT
+#  define RENDU_API_IMPORT
 #endif
 
-#ifdef TRINITY_API_EXPORT_COMMON
-#  define TC_COMMON_API TC_API_EXPORT
+#ifdef RENDU_API_EXPORT_COMMON
+#  define RENDU_COMMON_API RENDU_API_EXPORT
 #else
-#  define TC_COMMON_API TC_API_IMPORT
+#  define RENDU_COMMON_API RENDU_API_IMPORT
 #endif
 
-#ifdef TRINITY_API_EXPORT_DATABASE
-#  define TC_DATABASE_API TC_API_EXPORT
+#ifdef RENDU_API_EXPORT_DATABASE
+#  define RENDU_DATABASE_API RENDU_API_EXPORT
 #else
-#  define TC_DATABASE_API TC_API_IMPORT
+#  define RENDU_DATABASE_API RENDU_API_IMPORT
 #endif
 
-#ifdef TRINITY_API_EXPORT_SHARED
-#  define TC_SHARED_API TC_API_EXPORT
+#ifdef RENDU_API_EXPORT_SHARED
+#  define RENDU_SHARED_API RENDU_API_EXPORT
 #else
-#  define TC_SHARED_API TC_API_IMPORT
+#  define RENDU_SHARED_API RENDU_API_IMPORT
 #endif
 
-#ifdef TRINITY_API_EXPORT_GAME
-#  define TC_GAME_API TC_API_EXPORT
+#ifdef RENDU_API_EXPORT_GAME
+#  define RENDU_GAME_API RENDU_API_EXPORT
 #else
-#  define TC_GAME_API TC_API_IMPORT
+#  define RENDU_GAME_API RENDU_API_IMPORT
 #endif
 
 #define UI64FMTD "%" PRIu64
@@ -144,4 +127,4 @@ typedef uint32_t uint32;
 typedef uint16_t uint16;
 typedef uint8_t uint8;
 
-#endif //TRINITY_DEFINE_H
+#endif //RENDU_DEFINE_H

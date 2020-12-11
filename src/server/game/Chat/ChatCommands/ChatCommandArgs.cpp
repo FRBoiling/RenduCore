@@ -21,7 +21,7 @@
 #include "ObjectMgr.h"
 #include "SpellMgr.h"
 
-using namespace Trinity::ChatCommands;
+using namespace Rendu::ChatCommands;
 
 struct AchievementVisitor
 {
@@ -29,7 +29,7 @@ struct AchievementVisitor
     value_type operator()(Hyperlink<achievement> achData) const { return achData->Achievement; }
     value_type operator()(uint32 achId) const { return sAchievementMgr->GetAchievement(achId); }
 };
-char const* Trinity::ChatCommands::ArgInfo<AchievementEntry const*>::TryConsume(AchievementEntry const*& data, char const* args)
+char const* Rendu::ChatCommands::ArgInfo<AchievementEntry const*>::TryConsume(AchievementEntry const*& data, char const* args)
 {
     Variant <Hyperlink<achievement>, uint32> val;
     if ((args = CommandArgsConsumerSingle<decltype(val)>::TryConsumeTo(val, args)))
@@ -43,7 +43,7 @@ struct GameTeleVisitor
     value_type operator()(Hyperlink<tele> tele) const { return sObjectMgr->GetGameTele(tele); }
     value_type operator()(std::string const& tele) const { return sObjectMgr->GetGameTele(tele); }
 };
-char const* Trinity::ChatCommands::ArgInfo<GameTele const*>::TryConsume(GameTele const*& data, char const* args)
+char const* Rendu::ChatCommands::ArgInfo<GameTele const*>::TryConsume(GameTele const*& data, char const* args)
 {
     Variant<Hyperlink<tele>, std::string> val;
     if ((args = CommandArgsConsumerSingle<decltype(val)>::TryConsumeTo(val, args)))
@@ -57,7 +57,7 @@ struct SpellInfoVisitor
     value_type operator()(Hyperlink<spell> spell) const { return *spell; }
     value_type operator()(uint32 spellId) const { return sSpellMgr->GetSpellInfo(spellId); }
 };
-char const* Trinity::ChatCommands::ArgInfo<SpellInfo const*>::TryConsume(SpellInfo const*& data, char const* args)
+char const* Rendu::ChatCommands::ArgInfo<SpellInfo const*>::TryConsume(SpellInfo const*& data, char const* args)
 {
     Variant<Hyperlink<spell>, uint32> val;
     if ((args = CommandArgsConsumerSingle<decltype(val)>::TryConsumeTo(val, args)))
@@ -72,7 +72,7 @@ struct BoolVisitor
     value_type operator()(ExactSequence<'o', 'n'>) const { return true; }
     value_type operator()(ExactSequence<'o', 'f', 'f'>) const { return false; }
 };
-char const* Trinity::ChatCommands::ArgInfo<bool>::TryConsume(bool& data, char const* args)
+char const* Rendu::ChatCommands::ArgInfo<bool>::TryConsume(bool& data, char const* args)
 {
     Variant<uint32, ExactSequence<'o', 'n'>, ExactSequence<'o', 'f', 'f'>> val;
     if ((args = CommandArgsConsumerSingle<decltype(val)>::TryConsumeTo(val, args)))

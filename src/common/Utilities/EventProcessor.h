@@ -18,7 +18,7 @@
 #ifndef __EVENTPROCESSOR_H
 #define __EVENTPROCESSOR_H
 
-#include "advstd.h"
+// #include "advstd.h"
 #include "Define.h"
 #include "Duration.h"
 #include "Random.h"
@@ -29,7 +29,7 @@ class EventProcessor;
 
 // Note. All times are in milliseconds here.
 
-class TC_COMMON_API BasicEvent
+class RENDU_COMMON_API BasicEvent
 {
         friend class EventProcessor;
 
@@ -89,9 +89,9 @@ private:
 };
 
 template<typename T>
-using is_lambda_event = std::enable_if_t<!std::is_base_of_v<BasicEvent, std::remove_pointer_t<advstd::remove_cvref_t<T>>>>;
+using is_lambda_event = std::enable_if_t<!std::is_base_of_v<BasicEvent, std::remove_pointer_t<std::__remove_cvref_t<T>>>>;
 
-class TC_COMMON_API EventProcessor
+class RENDU_COMMON_API EventProcessor
 {
     public:
         EventProcessor() : m_time(0) { }

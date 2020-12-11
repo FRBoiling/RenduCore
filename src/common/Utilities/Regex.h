@@ -27,7 +27,7 @@
 #endif
 
 // regex compatibility layer, required for clang building with libstdc++-4.9
-namespace Trinity
+namespace Rendu
 {
     using regex = TC_REGEX_NAMESPACE :: regex;
     using wregex = TC_REGEX_NAMESPACE :: wregex;

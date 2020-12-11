@@ -22,21 +22,21 @@
 
 namespace GitRevision
 {
-    TC_COMMON_API char const* GetHash();
-    TC_COMMON_API char const* GetDate();
-    TC_COMMON_API char const* GetBranch();
-    TC_COMMON_API char const* GetCMakeCommand();
-    TC_COMMON_API char const* GetCMakeVersion();
-    TC_COMMON_API char const* GetHostOSVersion();
-    TC_COMMON_API char const* GetBuildDirectory();
-    TC_COMMON_API char const* GetSourceDirectory();
-    TC_COMMON_API char const* GetMySQLExecutable();
-    TC_COMMON_API char const* GetFullDatabase();
-    TC_COMMON_API char const* GetFullVersion();
-    TC_COMMON_API char const* GetCompanyNameStr();
-    TC_COMMON_API char const* GetLegalCopyrightStr();
-    TC_COMMON_API char const* GetFileVersionStr();
-    TC_COMMON_API char const* GetProductVersionStr();
+    RENDU_COMMON_API char const* GetHash();
+    RENDU_COMMON_API char const* GetDate();
+    RENDU_COMMON_API char const* GetBranch();
+    RENDU_COMMON_API char const* GetCMakeCommand();
+    RENDU_COMMON_API char const* GetCMakeVersion();
+    RENDU_COMMON_API char const* GetHostOSVersion();
+    RENDU_COMMON_API char const* GetBuildDirectory();
+    RENDU_COMMON_API char const* GetSourceDirectory();
+    RENDU_COMMON_API char const* GetMySQLExecutable();
+    RENDU_COMMON_API char const* GetFullDatabase();
+    RENDU_COMMON_API char const* GetFullVersion();
+    RENDU_COMMON_API char const* GetCompanyNameStr();
+    RENDU_COMMON_API char const* GetLegalCopyrightStr();
+    RENDU_COMMON_API char const* GetFileVersionStr();
+    RENDU_COMMON_API char const* GetProductVersionStr();
 }
 
 #endif

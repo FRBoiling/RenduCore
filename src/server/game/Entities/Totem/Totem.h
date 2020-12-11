@@ -31,7 +31,7 @@ enum TotemType
 
 #define SENTRY_TOTEM_ENTRY    3968
 
-class TC_GAME_API Totem : public Minion
+class RENDU_GAME_API Totem : public Minion
 {
     public:
         Totem(SummonPropertiesEntry const* properties, Unit* owner);

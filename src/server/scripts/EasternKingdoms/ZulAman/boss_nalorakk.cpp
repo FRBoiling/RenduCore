@@ -150,8 +150,8 @@ class boss_nalorakk : public CreatureScript
             {
                 std::vector<Creature*> tempList;
 
-                Trinity::AllFriendlyCreaturesInGrid check(me);
-                Trinity::CreatureListSearcher<Trinity::AllFriendlyCreaturesInGrid> searcher(me, tempList, check);
+                Rendu::AllFriendlyCreaturesInGrid check(me);
+                Rendu::CreatureListSearcher<Rendu::AllFriendlyCreaturesInGrid> searcher(me, tempList, check);
                 Cell::VisitGridObjects(me, searcher, 25.0f);
 
                 if (tempList.empty())

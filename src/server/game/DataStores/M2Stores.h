@@ -28,8 +28,8 @@ struct FlyByCamera
     Position locations;
 };
 
-TC_GAME_API void LoadM2Cameras(std::string const& dataPath);
+RENDU_GAME_API void LoadM2Cameras(std::string const& dataPath);
 
-TC_GAME_API std::vector<FlyByCamera> const* GetFlyByCameras(uint32 cinematicCameraId);
+RENDU_GAME_API std::vector<FlyByCamera> const* GetFlyByCameras(uint32 cinematicCameraId);
 
 #endif

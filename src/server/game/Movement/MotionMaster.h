@@ -90,7 +90,7 @@ static bool EmptyValidator()
     return true;
 }
 
-class TC_GAME_API MotionMaster
+class RENDU_GAME_API MotionMaster
 {
     public:
         typedef std::function<void()> DelayedActionDefine;

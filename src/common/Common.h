@@ -1,36 +1,19 @@
-/*
- * This file is part of the TrinityCore Project. See AUTHORS file for Copyright information
- *
- * This program is free software; you can redistribute it and/or modify it
- * under the terms of the GNU General Public License as published by the
- * Free Software Foundation; either version 2 of the License, or (at your
- * option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
- * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
- * more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program. If not, see <http://www.gnu.org/licenses/>.
- */
-
-#ifndef TRINITYCORE_COMMON_H
-#define TRINITYCORE_COMMON_H
+#ifndef RENDU_COMMON_H
+#define RENDU_COMMON_H
 
 #include "Define.h"
 #include <memory>
 #include <string>
 #include <utility>
 
-#if TRINITY_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
 #  include <ws2tcpip.h>
 
-#  if TRINITY_COMPILER == TRINITY_COMPILER_INTEL
+#  if RENDU_COMPILER == TRINITY_COMPILER_INTEL
 #    if !defined(BOOST_ASIO_HAS_MOVE)
 #      define BOOST_ASIO_HAS_MOVE
 #    endif // !defined(BOOST_ASIO_HAS_MOVE)
-#  endif // if TRINITY_COMPILER == TRINITY_COMPILER_INTEL
+#  endif // if RENDU_COMPILER == TRINITY_COMPILER_INTEL
 #else
 #  include <sys/types.h>
 #  include <sys/ioctl.h>
@@ -41,7 +24,7 @@
 #  include <cstdlib>
 #endif
 
-#if TRINITY_COMPILER == TRINITY_COMPILER_MICROSOFT
+#if RENDU_COMPILER == RENDU_COMPILER_MICROSOFT
 
 #define atoll _atoi64
 #define llabs _abs64
@@ -98,9 +81,9 @@ enum LocaleConstant : uint8
 #define MAX_LOCALES 8
 #define MAX_ACCOUNT_TUTORIAL_VALUES 8
 
-TC_COMMON_API extern char const* localeNames[TOTAL_LOCALES];
+RENDU_COMMON_API extern char const* localeNames[TOTAL_LOCALES];
 
-TC_COMMON_API LocaleConstant GetLocaleByName(std::string const& name);
+RENDU_COMMON_API LocaleConstant GetLocaleByName(std::string const& name);
 
 // we always use stdlib std::max/std::min, undefine some not C++ standard defines (Win API and some other platforms)
 #ifdef max

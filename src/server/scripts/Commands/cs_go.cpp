@@ -36,7 +36,7 @@ EndScriptData */
 #include "Util.h"
 #include "WorldSession.h"
 
-using namespace Trinity::ChatCommands;
+using namespace Rendu::ChatCommands;
 class go_commandscript : public CommandScript
 {
 public:
@@ -516,7 +516,7 @@ public:
             }
 
             // remove any matches without spawns
-            Trinity::Containers::EraseIf(matches, [&spawnLookup](decltype(matches)::value_type const& pair) { return spawnLookup[pair.second->Entry].empty(); });
+            Rendu::Containers::EraseIf(matches, [&spawnLookup](decltype(matches)::value_type const& pair) { return spawnLookup[pair.second->Entry].empty(); });
         }
 
         // check if we even have any matches left

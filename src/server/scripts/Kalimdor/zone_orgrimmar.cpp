@@ -447,8 +447,8 @@ public:
             if (gryshkaGUID.IsEmpty())
             {
                 std::list<Unit*> citizenList;
-                Trinity::AnyFriendlyUnitInObjectRangeCheck checker(me, me, 25.0f);
-                Trinity::UnitListSearcher<Trinity::AnyFriendlyUnitInObjectRangeCheck> searcher(me, citizenList, checker);
+                Rendu::AnyFriendlyUnitInObjectRangeCheck checker(me, me, 25.0f);
+                Rendu::UnitListSearcher<Rendu::AnyFriendlyUnitInObjectRangeCheck> searcher(me, citizenList, checker);
                 Cell::VisitGridObjects(me, searcher, 20.0f);
                 for (Unit* target : citizenList)
                 {

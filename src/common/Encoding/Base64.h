@@ -23,11 +23,11 @@
 #include <string>
 #include <vector>
 
-namespace Trinity
+namespace Rendu
 {
 namespace Encoding
 {
-struct TC_COMMON_API Base64
+struct RENDU_COMMON_API Base64
 {
     static std::string Encode(std::vector<uint8> const& data);
     static Optional<std::vector<uint8>> Decode(std::string const& data);

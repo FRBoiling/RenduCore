@@ -20,7 +20,7 @@
 
 #include <type_traits>
 
-namespace Trinity
+namespace Rendu
 {
 namespace ChatCommands
 {

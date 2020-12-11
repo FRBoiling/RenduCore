@@ -97,7 +97,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux" AND NOT NOJEM)
 
   target_link_libraries(jemalloc
     PRIVATE
-      trinity-dependency-interface
+      rendu-dependency-interface
     PUBLIC
       threads
       valgrind

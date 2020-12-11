@@ -26,7 +26,7 @@ target_include_directories(Detour
 
 target_link_libraries(Detour
   PRIVATE
-    trinity-dependency-interface
+    rendu-dependency-interface
   PUBLIC
     zlib)
 

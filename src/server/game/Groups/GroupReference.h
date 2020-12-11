@@ -23,7 +23,7 @@
 class Group;
 class Player;
 
-class TC_GAME_API GroupReference : public Reference<Group, Player>
+class RENDU_GAME_API GroupReference : public Reference<Group, Player>
 {
     protected:
         uint8 iSubGroup;

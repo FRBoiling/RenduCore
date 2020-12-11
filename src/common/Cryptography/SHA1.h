@@ -24,7 +24,7 @@
 
 class BigNumber;
 
-class TC_COMMON_API SHA1Hash
+class RENDU_COMMON_API SHA1Hash
 {
     public:
         SHA1Hash();
@@ -47,6 +47,6 @@ class TC_COMMON_API SHA1Hash
 };
 
 /// Returns the SHA1 hash of the given content as hex string.
-TC_COMMON_API std::string CalculateSHA1Hash(std::string const& content);
+RENDU_COMMON_API std::string CalculateSHA1Hash(std::string const& content);
 
 #endif

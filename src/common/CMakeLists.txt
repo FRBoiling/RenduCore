@@ -61,7 +61,7 @@ target_include_directories(common
 target_link_libraries(common
   PRIVATE
     process
-    trinity-core-interface
+    rendu-core-interface
   PUBLIC
     argon2
     boost

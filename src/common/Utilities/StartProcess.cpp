@@ -28,7 +28,7 @@ using namespace boost::process;
 using namespace boost::process::initializers;
 using namespace boost::iostreams;
 
-namespace Trinity
+namespace Rendu
 {
 
 template<typename T>
@@ -255,4 +255,4 @@ std::string SearchExecutableInPath(std::string const& filename)
     }
 }
 
-} // namespace Trinity
+} // namespace Rendu

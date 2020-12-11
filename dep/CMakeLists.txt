@@ -1,7 +1,7 @@
 add_subdirectory(threads)
 
 if(SERVERS OR TOOLS)
-  # add_subdirectory(boost)
+  add_subdirectory(boost)
   add_subdirectory(process)
   add_subdirectory(zlib)
   add_subdirectory(g3dlite)
@@ -13,6 +13,7 @@ if(SERVERS OR TOOLS)
   add_subdirectory(openssl)
   add_subdirectory(jemalloc)
   add_subdirectory(argon2)
+  add_subdirectory(gtest)
 endif()
 
 if(SERVERS)

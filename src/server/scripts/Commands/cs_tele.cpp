@@ -34,7 +34,7 @@ EndScriptData */
 #include "RBAC.h"
 #include "WorldSession.h"
 
-using namespace Trinity::ChatCommands;
+using namespace Rendu::ChatCommands;
 
 class tele_commandscript : public CommandScript
 {

@@ -28,7 +28,7 @@ namespace VMAP
 {
     //===========================================================
 
-    class TC_COMMON_API VMapFactory
+    class RENDU_COMMON_API VMapFactory
     {
         public:
             static IVMapManager* createOrGetVMapManager();

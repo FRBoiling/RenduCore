@@ -27,7 +27,7 @@
 class WorldSession;
 class Warden;
 
-class TC_GAME_API WardenMac : public Warden
+class RENDU_GAME_API WardenMac : public Warden
 {
     public:
         WardenMac();

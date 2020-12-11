@@ -17,10 +17,11 @@ endif(WIN32)
 
 add_subdirectory(genrev)
 add_subdirectory(common)
+add_subdirectory(test)
 
-# if(SERVERS)
-#   add_subdirectory(server)
-# endif(SERVERS)
+if(SERVERS)
+  add_subdirectory(server)
+endif(SERVERS)
 
 # if(TOOLS)
 #   add_subdirectory(tools)

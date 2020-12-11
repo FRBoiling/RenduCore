@@ -24,7 +24,7 @@
 #include "ObjectAccessor.h"
 #include "CellImpl.h"
 
-using namespace Trinity;
+using namespace Rendu;
 
 void VisibleNotifier::SendToSelf()
 {

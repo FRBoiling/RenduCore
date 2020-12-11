@@ -491,8 +491,8 @@ public:
             float x, y, z;
             me->GetPosition(x, y, z);
 
-            Trinity::AllCreaturesOfEntryInRange check(me, entry, 100);
-            Trinity::CreatureListSearcher<Trinity::AllCreaturesOfEntryInRange> searcher(me, templist, check);
+            Rendu::AllCreaturesOfEntryInRange check(me, entry, 100);
+            Rendu::CreatureListSearcher<Rendu::AllCreaturesOfEntryInRange> searcher(me, templist, check);
             Cell::VisitGridObjects(me, searcher, me->GetGridActivationRange());
 
             for (std::list<Creature*>::const_iterator i = templist.begin(); i != templist.end(); ++i)

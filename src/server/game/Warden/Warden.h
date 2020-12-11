@@ -91,7 +91,7 @@ struct ClientWardenModule
 
 class WorldSession;
 
-class TC_GAME_API Warden
+class RENDU_GAME_API Warden
 {
     friend class WardenWin;
     friend class WardenMac;

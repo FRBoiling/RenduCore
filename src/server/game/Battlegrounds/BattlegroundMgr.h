@@ -61,7 +61,7 @@ struct BattlegroundTemplate
     bool IsArena() const;
 };
 
-class TC_GAME_API BattlegroundMgr
+class RENDU_GAME_API BattlegroundMgr
 {
     private:
         BattlegroundMgr();

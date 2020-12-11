@@ -526,7 +526,7 @@ enum CharacterDatabaseStatements : uint32
     MAX_CHARACTERDATABASE_STATEMENTS
 };
 
-class TC_DATABASE_API CharacterDatabaseConnection : public MySQLConnection
+class RENDU_DATABASE_API CharacterDatabaseConnection : public MySQLConnection
 {
 public:
     typedef CharacterDatabaseStatements Statements;

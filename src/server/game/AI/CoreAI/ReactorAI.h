@@ -20,7 +20,7 @@
 
 #include "CreatureAI.h"
 
-class TC_GAME_API ReactorAI : public CreatureAI
+class RENDU_GAME_API ReactorAI : public CreatureAI
 {
     public:
         explicit ReactorAI(Creature* creature) : CreatureAI(creature) { }

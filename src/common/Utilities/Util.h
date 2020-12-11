@@ -33,7 +33,7 @@ enum class TimeFormat : uint8
     Numeric         // 1:2:3:4
 };
 
-class TC_COMMON_API Tokenizer
+class RENDU_COMMON_API Tokenizer
 {
 public:
     typedef std::vector<char const*> StorageType;
@@ -61,17 +61,17 @@ private:
     StorageType m_storage;
 };
 
-TC_COMMON_API int32 MoneyStringToMoney(std::string const& moneyString);
+RENDU_COMMON_API int32 MoneyStringToMoney(std::string const& moneyString);
 
-TC_COMMON_API struct tm* localtime_r(time_t const* time, struct tm *result);
-TC_COMMON_API time_t LocalTimeToUTCTime(time_t time);
-TC_COMMON_API time_t GetLocalHourTimestamp(time_t time, uint8 hour, bool onlyAfterTime = true);
-TC_COMMON_API tm TimeBreakdown(time_t t);
+RENDU_COMMON_API struct tm* localtime_r(time_t const* time, struct tm *result);
+RENDU_COMMON_API time_t LocalTimeToUTCTime(time_t time);
+RENDU_COMMON_API time_t GetLocalHourTimestamp(time_t time, uint8 hour, bool onlyAfterTime = true);
+RENDU_COMMON_API tm TimeBreakdown(time_t t);
 
-TC_COMMON_API std::string secsToTimeString(uint64 timeInSecs, TimeFormat timeFormat = TimeFormat::FullText, bool hoursOnly = false);
-TC_COMMON_API uint32 TimeStringToSecs(std::string const& timestring);
-TC_COMMON_API std::string TimeToTimestampStr(time_t t);
-TC_COMMON_API std::string TimeToHumanReadable(time_t t);
+RENDU_COMMON_API std::string secsToTimeString(uint64 timeInSecs, TimeFormat timeFormat = TimeFormat::FullText, bool hoursOnly = false);
+RENDU_COMMON_API uint32 TimeStringToSecs(std::string const& timestring);
+RENDU_COMMON_API std::string TimeToTimestampStr(time_t t);
+RENDU_COMMON_API std::string TimeToHumanReadable(time_t t);
 
 // Percentage calculation
 template <class T, class U>
@@ -102,23 +102,23 @@ template <class T>
 inline T square(T x) { return x*x; }
 
 // UTF8 handling
-TC_COMMON_API bool Utf8toWStr(const std::string& utf8str, std::wstring& wstr);
+RENDU_COMMON_API bool Utf8toWStr(const std::string& utf8str, std::wstring& wstr);
 
 // in wsize==max size of buffer, out wsize==real string size
-TC_COMMON_API bool Utf8toWStr(char const* utf8str, size_t csize, wchar_t* wstr, size_t& wsize);
+RENDU_COMMON_API bool Utf8toWStr(char const* utf8str, size_t csize, wchar_t* wstr, size_t& wsize);
 
 inline bool Utf8toWStr(const std::string& utf8str, wchar_t* wstr, size_t& wsize)
 {
     return Utf8toWStr(utf8str.c_str(), utf8str.size(), wstr, wsize);
 }
 
-TC_COMMON_API bool WStrToUtf8(std::wstring const& wstr, std::string& utf8str);
+RENDU_COMMON_API bool WStrToUtf8(std::wstring const& wstr, std::string& utf8str);
 // size==real string size
-TC_COMMON_API bool WStrToUtf8(wchar_t* wstr, size_t size, std::string& utf8str);
+RENDU_COMMON_API bool WStrToUtf8(wchar_t* wstr, size_t size, std::string& utf8str);
 
 // set string to "" if invalid utf8 sequence
-TC_COMMON_API size_t utf8length(std::string& utf8str);
-TC_COMMON_API void utf8truncate(std::string& utf8str, size_t len);
+RENDU_COMMON_API size_t utf8length(std::string& utf8str);
+RENDU_COMMON_API void utf8truncate(std::string& utf8str, size_t len);
 
 inline bool isBasicLatinCharacter(wchar_t wchar)
 {
@@ -287,29 +287,29 @@ inline wchar_t wcharToLower(wchar_t wchar)
     return wchar;
 }
 
-TC_COMMON_API void wstrToUpper(std::wstring& str);
-TC_COMMON_API void wstrToLower(std::wstring& str);
+RENDU_COMMON_API void wstrToUpper(std::wstring& str);
+RENDU_COMMON_API void wstrToLower(std::wstring& str);
 
-TC_COMMON_API std::wstring GetMainPartOfName(std::wstring const& wname, uint32 declension);
+RENDU_COMMON_API std::wstring GetMainPartOfName(std::wstring const& wname, uint32 declension);
 
-TC_COMMON_API bool utf8ToConsole(const std::string& utf8str, std::string& conStr);
-TC_COMMON_API bool consoleToUtf8(const std::string& conStr, std::string& utf8str);
-TC_COMMON_API bool Utf8FitTo(const std::string& str, std::wstring const& search);
-TC_COMMON_API void utf8printf(FILE* out, const char *str, ...);
-TC_COMMON_API void vutf8printf(FILE* out, const char *str, va_list* ap);
-TC_COMMON_API bool Utf8ToUpperOnlyLatin(std::string& utf8String);
+RENDU_COMMON_API bool utf8ToConsole(const std::string& utf8str, std::string& conStr);
+RENDU_COMMON_API bool consoleToUtf8(const std::string& conStr, std::string& utf8str);
+RENDU_COMMON_API bool Utf8FitTo(const std::string& str, std::wstring const& search);
+RENDU_COMMON_API void utf8printf(FILE* out, const char *str, ...);
+RENDU_COMMON_API void vutf8printf(FILE* out, const char *str, va_list* ap);
+RENDU_COMMON_API bool Utf8ToUpperOnlyLatin(std::string& utf8String);
 
-TC_COMMON_API bool IsIPAddress(char const* ipaddress);
+RENDU_COMMON_API bool IsIPAddress(char const* ipaddress);
 
-TC_COMMON_API uint32 CreatePIDFile(std::string const& filename);
-TC_COMMON_API uint32 GetPID();
+RENDU_COMMON_API uint32 CreatePIDFile(std::string const& filename);
+RENDU_COMMON_API uint32 GetPID();
 
-TC_COMMON_API std::string ByteArrayToHexStr(uint8 const* bytes, uint32 length, bool reverse = false);
-TC_COMMON_API void HexStrToByteArray(std::string const& str, uint8* out, bool reverse = false);
+RENDU_COMMON_API std::string ByteArrayToHexStr(uint8 const* bytes, uint32 length, bool reverse = false);
+RENDU_COMMON_API void HexStrToByteArray(std::string const& str, uint8* out, bool reverse = false);
 
-TC_COMMON_API bool StringToBool(std::string const& str);
+RENDU_COMMON_API bool StringToBool(std::string const& str);
 
-TC_COMMON_API bool StringContainsStringI(std::string const& haystack, std::string const& needle);
+RENDU_COMMON_API bool StringContainsStringI(std::string const& haystack, std::string const& needle);
 template <typename T>
 inline bool ValueContainsStringI(std::pair<T, std::string> const& haystack, std::string const& needle)
 {
@@ -350,7 +350,7 @@ class HookList final
         }
 };
 
-class TC_COMMON_API flag96
+class RENDU_COMMON_API flag96
 {
 private:
     uint32 part[3];

@@ -171,9 +171,9 @@ private:
     std::mutex _newSocketsLock;
     SocketContainer _newSockets;
 
-    Trinity::Asio::IoContext _ioContext;
+    Rendu::Asio::IoContext _ioContext;
     tcp::socket _acceptSocket;
-    Trinity::Asio::DeadlineTimer _updateTimer;
+    Rendu::Asio::DeadlineTimer _updateTimer;
 };
 
 #endif // NetworkThread_h__

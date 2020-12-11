@@ -21,7 +21,7 @@
 #include "Define.h"
 #include <utility>
 
-namespace Trinity
+namespace Rendu
 {
     /**
      * @class IteratorPair
@@ -53,6 +53,6 @@ namespace Trinity
     }
     //! namespace Containers
 }
-//! namespace Trinity
+//! namespace Rendu
 
 #endif // IteratorPair_h__

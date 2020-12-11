@@ -27,7 +27,7 @@
 @TRINITY_SCRIPTS_FORWARD_DECL@
 #ifdef TRINITY_IS_DYNAMIC_SCRIPTLOADER
 #  include "revision_data.h"
-#  define TC_SCRIPT_API TC_API_EXPORT
+#  define TC_SCRIPT_API RENDU_API_EXPORT
 extern "C" {
 
 /// Exposed in script modules to return the script module revision hash.

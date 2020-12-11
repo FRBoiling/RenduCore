@@ -1,2 +1,0 @@
-/usr/bin/ar qc libshared.a  CMakeFiles/shared.dir/SharedDefines.cpp.o CMakeFiles/shared.dir/enuminfo_SharedDefines.cpp.o CMakeFiles/shared.dir/DataStores/DBCDatabaseLoader.cpp.o CMakeFiles/shared.dir/DataStores/DBCStore.cpp.o CMakeFiles/shared.dir/Packets/ByteBuffer.cpp.o CMakeFiles/shared.dir/Realm/Realm.cpp.o CMakeFiles/shared.dir/Realm/RealmList.cpp.o CMakeFiles/shared.dir/Secrets/SecretMgr.cpp.o
-/usr/bin/ranlib libshared.a

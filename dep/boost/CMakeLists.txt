@@ -8,6 +8,24 @@
 # WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
 # implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
+# set(CMAKE_CXX_STANDARD 14)
+
+# set(BOOST_ROOT /usr/local/install/boost_1_61_0)
+
+# find_package(Boost COMPONENTS regex system REQUIRED)
+
+# if(Boost_FOUND)
+#     include_directories(${Boost_INCLUDE_DIRS})
+    
+#     MESSAGE( STATUS "Boost_INCLUDE_DIRS = ${Boost_INCLUDE_DIRS}.")
+#     MESSAGE( STATUS "Boost_LIBRARIES = ${Boost_LIBRARIES}.")
+#     MESSAGE( STATUS "Boost_LIB_VERSION = ${Boost_LIB_VERSION}.")
+
+#     add_executable(foo foo.cpp)
+#     target_link_libraries (foo ${Boost_LIBRARIES})
+# endif()
+
+
 if(WIN32)
   set(BOOST_DEBUG ON)
   if(DEFINED ENV{BOOST_ROOT})
@@ -53,6 +71,7 @@ else()
 endif()
 
 find_package(Boost ${BOOST_REQUIRED_VERSION} REQUIRED system filesystem thread program_options iostreams regex)
+message("---- ${BOOST_REQUIRED_VERSION}")
 
 # Find if Boost was compiled in C++03 mode because it requires -DBOOST_NO_CXX11_SCOPED_ENUMS
 

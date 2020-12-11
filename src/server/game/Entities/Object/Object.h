@@ -64,7 +64,7 @@ typedef std::unordered_map<Player*, UpdateData> UpdateDataMapType;
 
 float const DEFAULT_COLLISION_HEIGHT = 2.03128f; // Most common value in dbc
 
-class TC_GAME_API Object
+class RENDU_GAME_API Object
 {
     public:
         virtual ~Object();
@@ -282,7 +282,7 @@ class FlaggedValuesArray32
         T_FLAGS m_flags;
 };
 
-class TC_GAME_API WorldObject : public Object, public WorldLocation
+class RENDU_GAME_API WorldObject : public Object, public WorldLocation
 {
     protected:
         explicit WorldObject(bool isWorldObject); //note: here it means if it is in grid object list or world object list
@@ -581,7 +581,7 @@ class TC_GAME_API WorldObject : public Object, public WorldLocation
         bool CanDetectStealthOf(WorldObject const* obj, bool checkAlert = false) const;
 };
 
-namespace Trinity
+namespace Rendu
 {
     // Binary predicate to sort WorldObjects based on the distance to a reference WorldObject
     class ObjectDistanceOrderPred

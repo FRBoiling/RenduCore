@@ -22,15 +22,15 @@
 
 class Player;
 
-namespace Trinity
+namespace Rendu
 {
     namespace Helpers
     {
         namespace Entity
         {
             // Return values range from 0 (left-most spec) to 2 (right-most spec). If two specs have the same number of talent points, the left-most of those specs is returned.
-            TC_GAME_API uint8 GetPlayerSpecialization(Player const* who);
-            TC_GAME_API bool IsPlayerHealer(Player const* who);
+            RENDU_GAME_API uint8 GetPlayerSpecialization(Player const* who);
+            RENDU_GAME_API bool IsPlayerHealer(Player const* who);
             bool IsPlayerRangedAttacker(Player const* who);
         }
     }

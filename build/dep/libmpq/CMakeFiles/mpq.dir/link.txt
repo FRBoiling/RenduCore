@@ -1,2 +1,0 @@
-/bin/ar qc libmpq.a  CMakeFiles/mpq.dir/libmpq/common.c.o CMakeFiles/mpq.dir/libmpq/explode.c.o CMakeFiles/mpq.dir/libmpq/extract.c.o CMakeFiles/mpq.dir/libmpq/huffman.c.o CMakeFiles/mpq.dir/libmpq/mpq.c.o CMakeFiles/mpq.dir/libmpq/wave.c.o
-/bin/ranlib libmpq.a

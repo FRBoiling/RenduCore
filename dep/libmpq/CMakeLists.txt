@@ -27,7 +27,7 @@ target_include_directories(mpq
 
 target_link_libraries(mpq
   PRIVATE
-    trinity-dependency-interface
+    rendu-dependency-interface
   PUBLIC
     zlib
     bzip2)

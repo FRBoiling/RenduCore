@@ -23,7 +23,7 @@
 
 struct GameTele;
 
-namespace Trinity
+namespace Rendu
 {
 namespace ChatCommands
 {
@@ -111,28 +111,28 @@ struct ArgInfo<T, std::enable_if_t<std::is_base_of_v<ContainerTag, T>>>
 
 // AchievementEntry* from numeric id or link
 template <>
-struct TC_GAME_API ArgInfo<AchievementEntry const*>
+struct RENDU_GAME_API ArgInfo<AchievementEntry const*>
 {
     static char const* TryConsume(AchievementEntry const*&, char const*);
 };
 
 // GameTele* from string name or link
 template <>
-struct TC_GAME_API ArgInfo<GameTele const*>
+struct RENDU_GAME_API ArgInfo<GameTele const*>
 {
     static char const* TryConsume(GameTele const*&, char const*);
 };
 
 // SpellInfo const* from spell id or link
 template <>
-struct TC_GAME_API ArgInfo<SpellInfo const*>
+struct RENDU_GAME_API ArgInfo<SpellInfo const*>
 {
     static char const* TryConsume(SpellInfo const*&, char const*);
 };
 
 // bool from 1/0 or on/off
 template <>
-struct TC_GAME_API ArgInfo<bool>
+struct RENDU_GAME_API ArgInfo<bool>
 {
     static char const* TryConsume(bool&, char const*);
 };

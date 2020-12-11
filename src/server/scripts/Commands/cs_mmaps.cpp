@@ -262,8 +262,8 @@ public:
 
         // Get Creatures
         std::list<Creature*> creatureList;
-        Trinity::AnyUnitInObjectRangeCheck go_check(object, radius);
-        Trinity::CreatureListSearcher<Trinity::AnyUnitInObjectRangeCheck> go_search(object, creatureList, go_check);
+        Rendu::AnyUnitInObjectRangeCheck go_check(object, radius);
+        Rendu::CreatureListSearcher<Rendu::AnyUnitInObjectRangeCheck> go_search(object, creatureList, go_check);
         Cell::VisitGridObjects(object, go_search, radius);
 
         if (!creatureList.empty())

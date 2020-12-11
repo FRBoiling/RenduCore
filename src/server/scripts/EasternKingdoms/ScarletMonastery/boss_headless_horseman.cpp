@@ -386,7 +386,7 @@ struct npc_head : public ScriptedAI
         {
             _laughTimer.Reset(urand(15 * IN_MILLISECONDS, 30 * IN_MILLISECONDS));
 
-            DoPlaySoundToSet(me, Trinity::Containers::SelectRandomContainerElement(HeadlessHorsemanRandomLaughSound));
+            DoPlaySoundToSet(me, Rendu::Containers::SelectRandomContainerElement(HeadlessHorsemanRandomLaughSound));
 
             if (Creature* speaker = DoSpawnCreature(NPC_HELPER, 0.f, 0.f, 0.f, 0.f, TEMPSUMMON_TIMED_DESPAWN, 1 * IN_MILLISECONDS))
                 speaker->CastSpell(speaker, SPELL_HEADLESS_HORSEMAN___SPEAKS, false);
@@ -784,7 +784,7 @@ struct boss_headless_horseman : public ScriptedAI
         if (_withHead && _laughTimer.Passed())
         {
             _laughTimer.Reset(urand(11 * IN_MILLISECONDS, 22 * IN_MILLISECONDS));
-            DoPlaySoundToSet(me, Trinity::Containers::SelectRandomContainerElement(HeadlessHorsemanRandomLaughSound));
+            DoPlaySoundToSet(me, Rendu::Containers::SelectRandomContainerElement(HeadlessHorsemanRandomLaughSound));
         }
 
         if (UpdateVictim())

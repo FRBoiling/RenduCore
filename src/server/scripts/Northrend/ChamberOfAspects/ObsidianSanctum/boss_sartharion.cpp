@@ -396,14 +396,14 @@ public:
         void CastLavaStrikeOnTarget(Unit* target)
         {
             std::list<Creature*> fireCyclonesList;
-            Trinity::AllCreaturesOfEntryInRange checker(me, NPC_FIRE_CYCLONE, 200.0f);
-            Trinity::CreatureListSearcher<Trinity::AllCreaturesOfEntryInRange> searcher(me, fireCyclonesList, checker);
+            Rendu::AllCreaturesOfEntryInRange checker(me, NPC_FIRE_CYCLONE, 200.0f);
+            Rendu::CreatureListSearcher<Rendu::AllCreaturesOfEntryInRange> searcher(me, fireCyclonesList, checker);
             Cell::VisitAllObjects(me, searcher, 200.0f);
 
             if (fireCyclonesList.empty())
                 return;
 
-            Trinity::Containers::SelectRandomContainerElement(fireCyclonesList)->CastSpell(target, SPELL_LAVA_STRIKE, true);
+            Rendu::Containers::SelectRandomContainerElement(fireCyclonesList)->CastSpell(target, SPELL_LAVA_STRIKE, true);
         }
 
         void UpdateAI(uint32 diff) override

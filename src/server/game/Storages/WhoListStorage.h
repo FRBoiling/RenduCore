@@ -61,7 +61,7 @@ private:
 
 typedef std::vector<WhoListPlayerInfo> WhoListInfoVector;
 
-class TC_GAME_API WhoListStorageMgr
+class RENDU_GAME_API WhoListStorageMgr
 {
 private:
     WhoListStorageMgr() { };

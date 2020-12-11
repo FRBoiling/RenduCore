@@ -38,7 +38,7 @@ class WorldPacket;
 
 struct GameTele;
 
-class TC_GAME_API ChatHandler
+class RENDU_GAME_API ChatHandler
 {
     public:
         WorldSession* GetSession() { return m_session; }
@@ -64,7 +64,7 @@ class TC_GAME_API ChatHandler
         template<typename... Args>
         void PSendSysMessage(char const* fmt, Args&&... args)
         {
-            SendSysMessage(Trinity::StringFormat(fmt, std::forward<Args>(args)...).c_str());
+            SendSysMessage(Rendu::StringFormat(fmt, std::forward<Args>(args)...).c_str());
         }
 
         template<typename... Args>
@@ -76,7 +76,7 @@ class TC_GAME_API ChatHandler
         template<typename... Args>
         std::string PGetParseString(uint32 entry, Args&&... args) const
         {
-            return Trinity::StringFormat(GetTrinityString(entry), std::forward<Args>(args)...);
+            return Rendu::StringFormat(GetTrinityString(entry), std::forward<Args>(args)...);
         }
 
         bool _ParseCommands(char const* text);
@@ -147,7 +147,7 @@ class TC_GAME_API ChatHandler
         bool sentErrorMessage;
 };
 
-class TC_GAME_API CliHandler : public ChatHandler
+class RENDU_GAME_API CliHandler : public ChatHandler
 {
     public:
         typedef void Print(void*, char const*);
@@ -169,7 +169,7 @@ class TC_GAME_API CliHandler : public ChatHandler
         Print* m_print;
 };
 
-class TC_GAME_API AddonChannelCommandHandler : public ChatHandler
+class RENDU_GAME_API AddonChannelCommandHandler : public ChatHandler
 {
     public:
         using ChatHandler::ChatHandler;

@@ -25,12 +25,12 @@
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/asio/ip/tcp.hpp>
 
-void Metric::Initialize(std::string const& realmName, Trinity::Asio::IoContext& ioContext, std::function<void()> overallStatusLogger)
+void Metric::Initialize(std::string const& realmName, Rendu::Asio::IoContext& ioContext, std::function<void()> overallStatusLogger)
 {
     _dataStream = std::make_unique<boost::asio::ip::tcp::iostream>();
     _realmName = FormatInfluxDBTagValue(realmName);
-    _batchTimer = std::make_unique<Trinity::Asio::DeadlineTimer>(ioContext);
-    _overallStatusTimer = std::make_unique<Trinity::Asio::DeadlineTimer>(ioContext);
+    _batchTimer = std::make_unique<Rendu::Asio::DeadlineTimer>(ioContext);
+    _overallStatusTimer = std::make_unique<Rendu::Asio::DeadlineTimer>(ioContext);
     _overallStatusLogger = overallStatusLogger;
     LoadFromConfigs();
 }
@@ -219,7 +219,7 @@ void Metric::ScheduleSend()
 void Metric::Unload()
 {
     // Send what's queued only if IoContext is stopped (so only on shutdown)
-    if (_enabled && Trinity::Asio::get_io_context(*_batchTimer).stopped())
+    if (_enabled && Rendu::Asio::get_io_context(*_batchTimer).stopped())
     {
         _enabled = false;
         SendBatch();
@@ -293,11 +293,11 @@ Metric* Metric::instance()
     return &instance;
 }
 
-template TC_COMMON_API std::string Metric::FormatInfluxDBValue(int8);
-template TC_COMMON_API std::string Metric::FormatInfluxDBValue(uint8);
-template TC_COMMON_API std::string Metric::FormatInfluxDBValue(int16);
-template TC_COMMON_API std::string Metric::FormatInfluxDBValue(uint16);
-template TC_COMMON_API std::string Metric::FormatInfluxDBValue(int32);
-template TC_COMMON_API std::string Metric::FormatInfluxDBValue(uint32);
-template TC_COMMON_API std::string Metric::FormatInfluxDBValue(int64);
-template TC_COMMON_API std::string Metric::FormatInfluxDBValue(uint64);
+template RENDU_COMMON_API std::string Metric::FormatInfluxDBValue(int8);
+template RENDU_COMMON_API std::string Metric::FormatInfluxDBValue(uint8);
+template RENDU_COMMON_API std::string Metric::FormatInfluxDBValue(int16);
+template RENDU_COMMON_API std::string Metric::FormatInfluxDBValue(uint16);
+template RENDU_COMMON_API std::string Metric::FormatInfluxDBValue(int32);
+template RENDU_COMMON_API std::string Metric::FormatInfluxDBValue(uint32);
+template RENDU_COMMON_API std::string Metric::FormatInfluxDBValue(int64);
+template RENDU_COMMON_API std::string Metric::FormatInfluxDBValue(uint64);

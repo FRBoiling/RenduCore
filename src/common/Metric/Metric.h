@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef METRIC_H__
-#define METRIC_H__
+#ifndef METRIC_H
+#define METRIC_H
 
 #include "Define.h"
 #include "MPSCQueue.h"
@@ -28,7 +28,7 @@
 #include <vector>
 #include <utility>
 
-namespace Trinity
+namespace Rendu
 {
     namespace Asio
     {
@@ -60,14 +60,14 @@ struct MetricData
     std::string Text;
 };
 
-class TC_COMMON_API Metric
+class RENDU_COMMON_API Metric
 {
 private:
     std::iostream& GetDataStream() { return *_dataStream; }
     std::unique_ptr<std::iostream> _dataStream;
     MPSCQueue<MetricData> _queuedData;
-    std::unique_ptr<Trinity::Asio::DeadlineTimer> _batchTimer;
-    std::unique_ptr<Trinity::Asio::DeadlineTimer> _overallStatusTimer;
+    std::unique_ptr<Rendu::Asio::DeadlineTimer> _batchTimer;
+    std::unique_ptr<Rendu::Asio::DeadlineTimer> _overallStatusTimer;
     int32 _updateInterval = 0;
     int32 _overallStatusTimerInterval = 0;
     bool _enabled = false;
@@ -100,7 +100,7 @@ public:
     ~Metric();
     static Metric* instance();
 
-    void Initialize(std::string const& realmName, Trinity::Asio::IoContext& ioContext, std::function<void()> overallStatusLogger);
+    void Initialize(std::string const& realmName, Rendu::Asio::IoContext& ioContext, std::function<void()> overallStatusLogger);
     void LoadFromConfigs();
     void Update();
 
@@ -132,7 +132,7 @@ public:
 #ifdef PERFORMANCE_PROFILING
 #define TC_METRIC_EVENT(category, title, description) ((void)0)
 #define TC_METRIC_VALUE(category, value) ((void)0)
-#elif TRINITY_PLATFORM != TRINITY_PLATFORM_WINDOWS
+#elif RENDU_PLATFORM != TRINITY_PLATFORM_WINDOWS
 #define TC_METRIC_EVENT(category, title, description)                  \
         do {                                                           \
             if (sMetric->IsEnabled())                                  \
@@ -162,4 +162,4 @@ public:
         __pragma(warning(pop))
 #endif
 
-#endif // METRIC_H__
+#endif // METRIC_H

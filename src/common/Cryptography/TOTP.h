@@ -22,11 +22,11 @@
 #include <ctime>
 #include <vector>
 
-namespace Trinity
+namespace Rendu
 {
 namespace Crypto
 {
-struct TC_COMMON_API TOTP
+struct RENDU_COMMON_API TOTP
 {
     static constexpr std::size_t RECOMMENDED_SECRET_LENGTH = 20;
     using Secret = std::vector<uint8>;

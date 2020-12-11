@@ -93,7 +93,7 @@ struct BossBoundaryEntry
     AreaBoundary const* Boundary;
 };
 
-struct TC_GAME_API BossBoundaryData
+struct RENDU_GAME_API BossBoundaryData
 {
     typedef std::vector<BossBoundaryEntry> StorageType;
     typedef StorageType::const_iterator const_iterator;
@@ -150,7 +150,7 @@ typedef std::map<uint32 /*entry*/, MinionInfo> MinionInfoMap;
 typedef std::map<uint32 /*type*/, ObjectGuid /*guid*/> ObjectGuidMap;
 typedef std::map<uint32 /*entry*/, uint32 /*type*/> ObjectInfoMap;
 
-class TC_GAME_API InstanceScript : public ZoneScript
+class RENDU_GAME_API InstanceScript : public ZoneScript
 {
     public:
         explicit InstanceScript(Map* map);
@@ -318,10 +318,10 @@ class TC_GAME_API InstanceScript : public ZoneScript
         std::vector<InstanceSpawnGroupInfo> const* const _instanceSpawnGroups;
         std::unordered_set<uint32> _activatedAreaTriggers;
 
-    #ifdef TRINITY_API_USE_DYNAMIC_LINKING
+    #ifdef RENDU_API_USE_DYNAMIC_LINKING
         // Strong reference to the associated script module
         std::shared_ptr<ModuleReference> module_reference;
-    #endif // #ifndef TRINITY_API_USE_DYNAMIC_LINKING
+    #endif // #ifndef RENDU_API_USE_DYNAMIC_LINKING
 
         friend class debug_commandscript;
 };

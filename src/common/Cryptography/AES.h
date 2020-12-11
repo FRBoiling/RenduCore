@@ -22,11 +22,11 @@
 #include <array>
 #include <openssl/evp.h>
 
-namespace Trinity
+namespace Rendu
 {
 namespace Crypto
 {
-class TC_COMMON_API AES
+class RENDU_COMMON_API AES
 {
 public:
     static constexpr std::size_t IV_SIZE_BYTES = 12;

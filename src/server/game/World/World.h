@@ -526,7 +526,7 @@ enum RealmZone
 };
 
 /// Storage class for commands issued for delayed execution
-struct TC_GAME_API CliCommandHolder
+struct RENDU_GAME_API CliCommandHolder
 {
     typedef void(*Print)(void*, char const*);
     typedef void(*CommandFinished)(void*, bool success);
@@ -559,7 +559,7 @@ struct CharacterInfo
 };
 
 /// The World
-class TC_GAME_API World
+class RENDU_GAME_API World
 {
     public:
         static World* instance();
@@ -880,7 +880,7 @@ class TC_GAME_API World
     friend class debug_commandscript;
 };
 
-TC_GAME_API extern Realm realm;
+RENDU_GAME_API extern Realm realm;
 
 #define sWorld World::instance()
 

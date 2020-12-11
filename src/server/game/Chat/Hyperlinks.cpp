@@ -27,11 +27,11 @@
 #include "QuestDef.h"
 #include "World.h"
 
-using namespace Trinity::Hyperlinks;
+using namespace Rendu::Hyperlinks;
 
 inline uint8 toHex(char c) { return (c >= '0' && c <= '9') ? c - '0' + 0x10 : (c >= 'a' && c <= 'f') ? c - 'a' + 0x1a : 0x00; }
 // Validates a single hyperlink
-HyperlinkInfo Trinity::Hyperlinks::ParseHyperlink(char const* pos)
+HyperlinkInfo Rendu::Hyperlinks::ParseHyperlink(char const* pos)
 {
     //color tag
     if (*(pos++) != '|' || *(pos++) != 'c')
@@ -302,7 +302,7 @@ struct LinkValidator<LinkTags::trade>
     if (info.tag.second == strlen(LinkTags::tagname::tag()) &&                                          \
         !strncmp(info.tag.first, LinkTags::tagname::tag(), strlen(LinkTags::tagname::tag())))           \
     {                                                                                                   \
-        advstd::remove_cvref_t<typename LinkTags::tagname::value_type> t;                               \
+        std::__remove_cvref_t<typename LinkTags::tagname::value_type> t;                               \
         if (!LinkTags::tagname::StoreTo(t, info.data.first, info.data.second))                          \
             return false;                                                                               \
         if (!LinkValidator<LinkTags::tagname>::IsColorValid(t, info.color))                             \
@@ -341,7 +341,7 @@ static bool ValidateLinkInfo(HyperlinkInfo const& info)
 }
 
 // Validates all hyperlinks and control sequences contained in str
-bool Trinity::Hyperlinks::CheckAllLinks(std::string const& str)
+bool Rendu::Hyperlinks::CheckAllLinks(std::string const& str)
 {
     // Step 1: Disallow all control sequences except ||, |H, |h, |c and |r
     {

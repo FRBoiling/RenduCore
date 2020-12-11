@@ -29,7 +29,7 @@
 #include <map>
 #include <unordered_map>
 
-namespace Trinity
+namespace Rendu
 {
     // Helpers
     // Insert helpers

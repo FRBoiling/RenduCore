@@ -23,7 +23,7 @@
 
 #include "Item.h"
 
-class TC_GAME_API Bag : public Item
+class RENDU_GAME_API Bag : public Item
 {
     public:
         Bag();

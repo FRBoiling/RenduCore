@@ -8,7 +8,7 @@
 
 using namespace std;
 
-namespace handy {
+namespace util {
 
 Status file::getContent(const std::string& filename, std::string& cont){
     int fd = open(filename.c_str(), O_RDONLY);

@@ -23,11 +23,11 @@
 #include "Optional.h"
 #include <string>
 
-namespace Trinity
+namespace Rendu
 {
 namespace Crypto
 {
-struct TC_COMMON_API Argon2
+struct RENDU_COMMON_API Argon2
 {
     static constexpr uint32 HASH_LEN = 16;                    // 128 bits, in bytes
     static constexpr uint32 ENCODED_HASH_LEN = 100;           // in chars

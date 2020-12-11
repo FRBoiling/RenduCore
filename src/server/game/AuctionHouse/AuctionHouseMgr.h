@@ -72,7 +72,7 @@ enum AuctionHouses
     AUCTIONHOUSE_NEUTRAL        = 7
 };
 
-struct TC_GAME_API AuctionEntry
+struct RENDU_GAME_API AuctionEntry
 {
     uint32 Id;
     uint8 houseId;
@@ -105,7 +105,7 @@ struct TC_GAME_API AuctionEntry
 };
 
 //this class is used as auctionhouse instance
-class TC_GAME_API AuctionHouseObject
+class RENDU_GAME_API AuctionHouseObject
 {
 public:
     ~AuctionHouseObject()
@@ -150,7 +150,7 @@ private:
 
 };
 
-class TC_GAME_API AuctionHouseMgr
+class RENDU_GAME_API AuctionHouseMgr
 {
     private:
         AuctionHouseMgr();
