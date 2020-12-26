@@ -4,9 +4,14 @@
 # include_directories(${GTEST_INCLUDE_DIRS})
 
 CollectSourceFiles(
-  ${CMAKE_CURRENT_SOURCE_DIR}
-  PRIVATE_SOURCES
-)
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        PRIVATE_SOURCES
+        # Exclude
+        ${CMAKE_CURRENT_SOURCE_DIR}/PrecompiledHeaders)
+
+if(USE_COREPCH)
+    set(PRIVATE_PCH_HEADER PrecompiledHeaders/testPCH.h)
+endif()
 
 GroupSources(${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -17,7 +22,9 @@ target_link_libraries(uinttest
   PRIVATE
     rendu-core-interface
   PUBLIC
-    gtest)
+    gtest
+    common
+    )
 
 CollectIncludeDirectories(
   ${CMAKE_CURRENT_SOURCE_DIR}
@@ -36,7 +43,9 @@ set_target_properties(uinttest
       FOLDER
         "test")
 
-
+if(USE_COREPCH)
+    add_cxx_pch(common ${PRIVATE_PCH_HEADER})
+endif()
 # install(TARGETS uinttest DESTINATION bin)        
 # # 添加到测试
 # gtest_discover_tests(test_my_class)
