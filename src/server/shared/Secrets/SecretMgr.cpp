@@ -67,7 +67,7 @@ static Optional<BigNumber> GetHexFromConfig(char const* configKey, int bits)
     BigNumber secret;
     if (!secret.SetHexStr(str.c_str()))
     {
-        TC_LOG_FATAL("server.loading", "Invalid value for '%s' - specify a hexadecimal integer of up to %d bits with no prefix.", configKey, bits);
+        LOG_FATAL("server.loading", "Invalid value for '%s' - specify a hexadecimal integer of up to %d bits with no prefix.", configKey, bits);
         ABORT();
     }
 
@@ -75,7 +75,7 @@ static Optional<BigNumber> GetHexFromConfig(char const* configKey, int bits)
     threshold <<= bits;
     if (!((BigNumber(0) <= secret) && (secret < threshold)))
     {
-        TC_LOG_ERROR("server.loading", "Value for '%s' is out of bounds (should be an integer of up to %d bits with no prefix). Truncated to %d bits.", configKey, bits, bits);
+        LOG_ERROR("server.loading", "Value for '%s' is out of bounds (should be an integer of up to %d bits with no prefix). Truncated to %d bits.", configKey, bits, bits);
         secret %= threshold;
     }
     ASSERT(((BigNumber(0) <= secret) && (secret < threshold)));
@@ -155,7 +155,7 @@ void SecretMgr::AttemptLoad(Secrets i, LogLevel errorLevel, std::unique_lock<std
             return;
         }
 
-        TC_LOG_INFO("server.loading", "Successfully transitioned database to new '%s' value.", info.configKey);
+        LOG_INFO("server.loading", "Successfully transitioned database to new '%s' value.", info.configKey);
     }
 
     if (currentValue)
