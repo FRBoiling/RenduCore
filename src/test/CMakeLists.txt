@@ -15,10 +15,10 @@ endif()
 
 GroupSources(${CMAKE_CURRENT_SOURCE_DIR})
 
-add_executable(uinttest ${PRIVATE_SOURCES})
+add_executable(unittest ${PRIVATE_SOURCES})
 
 # # 链接测试库
-target_link_libraries(uinttest
+target_link_libraries(unittest
   PRIVATE
     rendu-core-interface
   PUBLIC
@@ -32,13 +32,13 @@ CollectIncludeDirectories(
   # Exclude
   ${CMAKE_CURRENT_SOURCE_DIR}/PrecompiledHeaders)
     
-target_include_directories(uinttest
+target_include_directories(unittest
   PUBLIC
     ${PUBLIC_INCLUDES}
   PRIVATE
     ${CMAKE_CURRENT_BINARY_DIR})
 
-set_target_properties(uinttest
+set_target_properties(unittest
     PROPERTIES
       FOLDER
         "test")
@@ -46,6 +46,6 @@ set_target_properties(uinttest
 if(USE_COREPCH)
     add_cxx_pch(common ${PRIVATE_PCH_HEADER})
 endif()
-# install(TARGETS uinttest DESTINATION bin)        
+# install(TARGETS unittest DESTINATION bin)        
 # # 添加到测试
 # gtest_discover_tests(test_my_class)

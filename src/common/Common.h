@@ -6,7 +6,7 @@
 #include <string>
 #include <utility>
 
-#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == RENDU_PLATFORM_WINDOWS
 #  include <ws2tcpip.h>
 
 #  if RENDU_COMPILER == TRINITY_COMPILER_INTEL

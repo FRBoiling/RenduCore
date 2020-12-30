@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include <iostream>
+#include "Log.h"
 
 int test_fun(int a) {
     return a + 1;
@@ -11,7 +12,7 @@ TEST(FunTest, HandlesZeroInput) {
 }
 
 TEST(LogTest,ConsoleLog){
-
+    LOG_INFO("server.loading", "Loading IP Location Database...");
 }
 
 

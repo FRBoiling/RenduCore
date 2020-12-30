@@ -33,16 +33,16 @@
     terminates the application.
  */
 
-#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == RENDU_PLATFORM_WINDOWS
 #include <Windows.h>
 #define Crash(message) \
     ULONG_PTR execeptionArgs[] = { reinterpret_cast<ULONG_PTR>(strdup(message)), reinterpret_cast<ULONG_PTR>(_ReturnAddress()) }; \
     RaiseException(EXCEPTION_ASSERTION_FAILURE, 0, 2, execeptionArgs);
 #else
 // should be easily accessible in gdb
-extern "C" { RENDU_COMMON_API char const* TrinityAssertionFailedMessage = nullptr; }
+extern "C" { RENDU_COMMON_API char const* RenduAssertionFailedMessage = nullptr; }
 #define Crash(message) \
-    TrinityAssertionFailedMessage = strdup(message); \
+    RenduAssertionFailedMessage = strdup(message); \
     *((volatile int*)nullptr) = 0; \
     exit(1);
 #endif

@@ -132,7 +132,7 @@ public:
 #ifdef PERFORMANCE_PROFILING
 #define TC_METRIC_EVENT(category, title, description) ((void)0)
 #define TC_METRIC_VALUE(category, value) ((void)0)
-#elif RENDU_PLATFORM != TRINITY_PLATFORM_WINDOWS
+#elif RENDU_PLATFORM != RENDU_PLATFORM_WINDOWS
 #define TC_METRIC_EVENT(category, title, description)                  \
         do {                                                           \
             if (sMetric->IsEnabled())                                  \

@@ -189,7 +189,7 @@ extern int main(int argc, char** argv)
 
     // Set signal handlers (this must be done before starting IoContext threads, because otherwise they would unblock and exit)
     boost::asio::signal_set signals(*ioContext, SIGINT, SIGTERM);
-#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == RENDU_PLATFORM_WINDOWS
     signals.add(SIGBREAK);
 #endif
     signals.async_wait(SignalHandler);

@@ -129,7 +129,7 @@ class RENDU_COMMON_API Log
 
 #ifdef PERFORMANCE_PROFILING
 #define LOG_MESSAGE_BODY(filterType__, level__, ...) ((void)0)
-#elif RENDU_PLATFORM != TRINITY_PLATFORM_WINDOWS
+#elif RENDU_PLATFORM != RENDU_PLATFORM_WINDOWS
 void check_args(char const*, ...) ATTR_PRINTF(1, 2);
 void check_args(std::string const&, ...);
 

@@ -5,7 +5,7 @@
 //==========================================
 #include "CompilerDefs.h"
 
-#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS && !defined(__MINGW32__)
+#if RENDU_PLATFORM == RENDU_PLATFORM_WINDOWS && !defined(__MINGW32__)
 #ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
 #endif

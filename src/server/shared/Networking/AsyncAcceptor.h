@@ -84,7 +84,7 @@ public:
             return false;
         }
 
-#if RENDU_PLATFORM != TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM != RENDU_PLATFORM_WINDOWS
         _acceptor.set_option(boost::asio::ip::tcp::acceptor::reuse_address(true), errorCode);
         if (errorCode)
         {

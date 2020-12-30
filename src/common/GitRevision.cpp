@@ -68,7 +68,7 @@ char const* GitRevision::GetFullDatabase()
     return _FULL_DATABASE;
 }
 
-#if RENDU_PLATFORM == TRINITY_PLATFORM_WINDOWS
+#if RENDU_PLATFORM == RENDU_PLATFORM_WINDOWS
 #  ifdef _WIN64
 #    define TRINITY_PLATFORM_STR "Win64"
 #  else
